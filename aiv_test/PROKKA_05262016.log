@@ -1,0 +1,63 @@
+[15:48:46] Command: --kingdom Viruses --outdir aiv_test La_Habana_test.fasta
+[15:48:46] Looking for 'aragorn' - found /home/rodrigo/Software/prokka-1.11/bin/../binaries/linux/aragorn
+[15:48:46] Determined aragorn version is 1.2
+[15:48:46] Looking for 'blastp' - found /usr/bin/blastp
+[15:48:46] Determined blastp version is 2.2
+[15:48:46] Looking for 'cmpress' - found /usr/bin/cmpress
+[15:48:46] Determined cmpress version is 1.1
+[15:48:46] Looking for 'cmscan' - found /usr/bin/cmscan
+[15:48:46] Determined cmscan version is 1.1
+[15:48:46] Looking for 'egrep' - found /bin/egrep
+[15:48:46] Looking for 'find' - found /usr/bin/find
+[15:48:46] Looking for 'grep' - found /bin/grep
+[15:48:46] Looking for 'hmmpress' - found /usr/bin/hmmpress
+[15:48:46] Determined hmmpress version is 3.1
+[15:48:46] Looking for 'hmmscan' - found /usr/bin/hmmscan
+[15:48:46] Determined hmmscan version is 3.1
+[15:48:46] Looking for 'less' - found /usr/bin/less
+[15:48:46] Looking for 'makeblastdb' - found /usr/bin/makeblastdb
+[15:48:46] Determined makeblastdb version is 2.2
+[15:48:46] Looking for 'minced' - found /home/rodrigo/Software/prokka-1.11/bin/../binaries/linux/../common/minced
+[15:48:46] Determined minced version is 1.6
+[15:48:46] Looking for 'parallel' - found /usr/bin/parallel
+[15:48:46] Determined parallel version is 20130922
+[15:48:46] Looking for 'prodigal' - found /home/rodrigo/Software/prokka-1.11/bin/../binaries/linux/prodigal
+[15:48:47] Determined prodigal version is 2.6
+[15:48:47] Looking for 'prokka-genbank_to_fasta_db' - found /home/rodrigo/Software/prokka-1.11/bin/prokka-genbank_to_fasta_db
+[15:48:47] Looking for 'sed' - found /bin/sed
+[15:48:47] Looking for 'tbl2asn' - found /home/rodrigo/Software/prokka-1.11/bin/../binaries/linux/tbl2asn
+[15:48:47] Determined tbl2asn version is 23.2
+[15:48:47] Using genetic code table 1.
+[15:48:47] Loading and checking input file: La_Habana_test.fasta
+[15:48:47] Wrote 8 contigs
+[15:48:47] Predicting tRNAs and tmRNAs
+[15:48:47] Running: aragorn -gc1  -w aiv_test\/PROKKA_05262016\.fna
+[15:48:47] Found 0 tRNAs
+[15:48:47] Disabling rRNA search: --kingdom=Viruses or --norrna=0
+[15:48:47] Skipping ncRNA search, enable with --rfam if desired.
+[15:48:47] Total of 0 tRNA + rRNA features
+[15:48:47] Searching for CRISPR repeats
+[15:48:47] Found 0 CRISPRs
+[15:48:47] Predicting coding sequences
+[15:48:47] Contigs total 13371 bp, so using meta mode
+[15:48:47] Running: prodigal -i aiv_test\/PROKKA_05262016\.fna -c -m -g 1 -p meta -f sco -q
+[15:48:47] Found 9 CDS
+[15:48:47] Connecting features back to sequences
+[15:48:47] Not using genus-specific database. Try --usegenus to enable it.
+[15:48:47] Annotating CDS, please be patient.
+[15:48:47] Will use 8 CPUs for similarity searching.
+[15:48:47] There are still 9 unannotated CDS left (started with 9)
+[15:48:47] Will use blast to search against /home/rodrigo/Software/prokka-1.11/bin/../db/kingdom/Viruses/sprot with 8 CPUs
+[15:48:47] Running: cat aiv_test\/sprot\.faa | parallel --gnu --plain -j 8 --block 270 --recstart '>' --pipe blastp -query - -db /home/rodrigo/Software/prokka-1.11/bin/../db/kingdom/Viruses/sprot -evalue 1e-06 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > aiv_test\/sprot\.blast 2> /dev/null
+[15:48:47] Deleting unwanted file: aiv_test/sprot.faa
+[15:48:47] Deleting unwanted file: aiv_test/sprot.blast
+[15:48:47] Found 8 unique /gene codes.
+[15:48:47] Fixed 2 duplicate /gene - NS_1 NS_2
+[15:48:47] Fixed 1 colliding /gene names.
+[15:48:47] Adding /locus_tag identifiers
+[15:48:47] Assigned 9 locus_tags to CDS and RNA features.
+[15:48:47] Writing outputs to aiv_test/
+[15:48:47] Generating annotation statistics file
+[15:48:47] Generating Genbank and Sequin files
+[15:48:47] Running: tbl2asn -V b -a r10k -l paired-ends -M n -N 1 -y 'Annotated using prokka 1.11 from http://www.vicbioinformatics.com' -Z aiv_test\/PROKKA_05262016\.err -i aiv_test\/PROKKA_05262016\.fsa 2> /dev/null
+[15:48:47] Could not run command: tbl2asn -V b -a r10k -l paired-ends -M n -N 1 -y 'Annotated using prokka 1.11 from http://www.vicbioinformatics.com' -Z aiv_test\/PROKKA_05262016\.err -i aiv_test\/PROKKA_05262016\.fsa 2> /dev/null

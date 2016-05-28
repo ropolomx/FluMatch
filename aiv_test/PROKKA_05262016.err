@@ -1,0 +1,105 @@
+Discrepancy Report Results
+
+Summary
+FATAL: MISSING_PROTEIN_ID:9 proteins have invalid IDs.
+DISC_SOURCE_QUALS_ASNDISC:strain (all present, all same)
+DISC_SOURCE_QUALS_ASNDISC:taxname (all present, all same)
+DISC_FEATURE_COUNT:CDS: 9 present
+DISC_COUNT_NUCLEOTIDES:8 nucleotide Bioseqs are present
+FEATURE_LOCATION_CONFLICT:9 features have inconsistent gene locations.
+DISC_QUALITY_SCORES:Quality scores are missing on all sequences.
+ONCALLER_COMMENT_PRESENT:8 comment descriptors were found (all same)
+MISSING_GENOMEASSEMBLY_COMMENTS:8 bioseqs are missing GenomeAssembly structured comments
+DISC_INCONSISTENT_MOLINFO_TECH:Molinfo Technique Report (some missing, all same)
+
+
+Detailed Report
+
+FATAL: DiscRep_ALL:MISSING_PROTEIN_ID::9 proteins have invalid IDs.
+aiv_test/PROKKA_05262016:HE584753.1_1 (length 759)
+aiv_test/PROKKA_05262016:HE584754.1_1 (length 757)
+aiv_test/PROKKA_05262016:HE584755.1_1 (length 712, 1 gap)
+aiv_test/PROKKA_05262016:HE584756.1_1 (length 566)
+aiv_test/PROKKA_05262016:HE584757.1_1 (length 498)
+aiv_test/PROKKA_05262016:HE584758.1_1 (length 469)
+aiv_test/PROKKA_05262016:HE584759.1_1 (length 252)
+aiv_test/PROKKA_05262016:HE584760.1_1 (length 214)
+aiv_test/PROKKA_05262016:HE584760.1_2 (length 72)
+
+DiscRep_ALL:DISC_SOURCE_QUALS_ASNDISC::strain (all present, all same)
+DiscRep_SUB:DISC_SOURCE_QUALS_ASNDISC::8 sources have 'strain' for strain
+DiscRep_ALL:DISC_SOURCE_QUALS_ASNDISC::taxname (all present, all same)
+DiscRep_SUB:DISC_SOURCE_QUALS_ASNDISC::8 sources have 'Genus species' for taxname
+DiscRep_ALL:DISC_FEATURE_COUNT::CDS: 9 present
+DiscRep_ALL:DISC_COUNT_NUCLEOTIDES::8 nucleotide Bioseqs are present
+aiv_test/PROKKA_05262016:HE584753.1 (length 2280)
+aiv_test/PROKKA_05262016:HE584754.1 (length 2379)
+aiv_test/PROKKA_05262016:HE584755.1 (length 2202)
+aiv_test/PROKKA_05262016:HE584756.1 (length 1752)
+aiv_test/PROKKA_05262016:HE584757.1 (length 1497)
+aiv_test/PROKKA_05262016:HE584758.1 (length 1438)
+aiv_test/PROKKA_05262016:HE584759.1 (length 983)
+aiv_test/PROKKA_05262016:HE584760.1 (length 840)
+
+DiscRep_ALL:FEATURE_LOCATION_CONFLICT::9 features have inconsistent gene locations.
+DiscRep_SUB:FEATURE_LOCATION_CONFLICT::Coding region xref gene does not exist
+aiv_test/PROKKA_05262016:CDS	Polymerase basic protein 2	lcl|HE584753.1:1-2280	PROKKA_00001
+
+DiscRep_SUB:FEATURE_LOCATION_CONFLICT::Coding region xref gene does not exist
+aiv_test/PROKKA_05262016:CDS	RNA-directed RNA polymerase catalytic subunit	lcl|HE584754.1:1-2274	PROKKA_00002
+
+DiscRep_SUB:FEATURE_LOCATION_CONFLICT::Coding region xref gene does not exist
+aiv_test/PROKKA_05262016:CDS	Polymerase acidic protein	lcl|HE584755.1:13-2151	PROKKA_00003
+
+DiscRep_SUB:FEATURE_LOCATION_CONFLICT::Coding region xref gene does not exist
+aiv_test/PROKKA_05262016:CDS	Hemagglutinin precursor	lcl|HE584756.1:1-1701	PROKKA_00004
+
+DiscRep_SUB:FEATURE_LOCATION_CONFLICT::Coding region xref gene does not exist
+aiv_test/PROKKA_05262016:CDS	Nucleoprotein	lcl|HE584757.1:1-1497	PROKKA_00005
+
+DiscRep_SUB:FEATURE_LOCATION_CONFLICT::Coding region xref gene does not exist
+aiv_test/PROKKA_05262016:CDS	Neuraminidase	lcl|HE584758.1:1-1410	PROKKA_00006
+
+DiscRep_SUB:FEATURE_LOCATION_CONFLICT::Coding region xref gene does not exist
+aiv_test/PROKKA_05262016:CDS	Matrix protein 1	lcl|HE584759.1:1-759	PROKKA_00007
+
+DiscRep_SUB:FEATURE_LOCATION_CONFLICT::Coding region xref gene does not exist
+aiv_test/PROKKA_05262016:CDS	Non-structural protein 1	lcl|HE584760.1:16-660	PROKKA_00008
+
+DiscRep_SUB:FEATURE_LOCATION_CONFLICT::Coding region xref gene does not exist
+aiv_test/PROKKA_05262016:CDS	Nuclear export protein	lcl|HE584760.1:620-838	PROKKA_00009
+
+DiscRep_ALL:DISC_QUALITY_SCORES::Quality scores are missing on all sequences.
+
+DiscRep_ALL:ONCALLER_COMMENT_PRESENT::8 comment descriptors were found (all same)
+aiv_test/PROKKA_05262016:HE584753.1:Annotated using prokka 1.11 from http://www.vicbioinformatics.com
+aiv_test/PROKKA_05262016:HE584754.1:Annotated using prokka 1.11 from http://www.vicbioinformatics.com
+aiv_test/PROKKA_05262016:HE584755.1:Annotated using prokka 1.11 from http://www.vicbioinformatics.com
+aiv_test/PROKKA_05262016:HE584756.1:Annotated using prokka 1.11 from http://www.vicbioinformatics.com
+aiv_test/PROKKA_05262016:HE584757.1:Annotated using prokka 1.11 from http://www.vicbioinformatics.com
+aiv_test/PROKKA_05262016:HE584758.1:Annotated using prokka 1.11 from http://www.vicbioinformatics.com
+aiv_test/PROKKA_05262016:HE584759.1:Annotated using prokka 1.11 from http://www.vicbioinformatics.com
+aiv_test/PROKKA_05262016:HE584760.1:Annotated using prokka 1.11 from http://www.vicbioinformatics.com
+
+DiscRep_ALL:MISSING_GENOMEASSEMBLY_COMMENTS::8 bioseqs are missing GenomeAssembly structured comments
+aiv_test/PROKKA_05262016:HE584753.1 (length 2280)
+aiv_test/PROKKA_05262016:HE584754.1 (length 2379)
+aiv_test/PROKKA_05262016:HE584755.1 (length 2202)
+aiv_test/PROKKA_05262016:HE584756.1 (length 1752)
+aiv_test/PROKKA_05262016:HE584757.1 (length 1497)
+aiv_test/PROKKA_05262016:HE584758.1 (length 1438)
+aiv_test/PROKKA_05262016:HE584759.1 (length 983)
+aiv_test/PROKKA_05262016:HE584760.1 (length 840)
+
+DiscRep_ALL:DISC_INCONSISTENT_MOLINFO_TECH::Molinfo Technique Report (some missing, all same)
+DiscRep_SUB:DISC_INCONSISTENT_MOLINFO_TECH::technique (all missing)
+DiscRep_SUB:DISC_INCONSISTENT_MOLINFO_TECH::8 Molinfos are missing field technique
+aiv_test/PROKKA_05262016:HE584753.1 (length 2280)
+aiv_test/PROKKA_05262016:HE584754.1 (length 2379)
+aiv_test/PROKKA_05262016:HE584755.1 (length 2202)
+aiv_test/PROKKA_05262016:HE584756.1 (length 1752)
+aiv_test/PROKKA_05262016:HE584757.1 (length 1497)
+aiv_test/PROKKA_05262016:HE584758.1 (length 1438)
+aiv_test/PROKKA_05262016:HE584759.1 (length 983)
+aiv_test/PROKKA_05262016:HE584760.1 (length 840)
+

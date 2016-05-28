@@ -1,0 +1,67 @@
+>Feature NODE_1
+26	2299	CDS
+			EC_number	2.7.7.48
+			gene	PB1
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q3HM40
+			locus_tag	PROKKA_00001
+			product	RNA-directed RNA polymerase catalytic subunit
+>Feature NODE_14
+>Feature NODE_7
+927	214	CDS
+			gene	NS
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q99AU3
+			locus_tag	PROKKA_00002
+			product	Non-structural protein 1
+>Feature NODE_15
+>Feature NODE_12
+>Feature NODE_17
+>Feature NODE_2
+28	2307	CDS
+			gene	PB2
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q3HM41
+			locus_tag	PROKKA_00003
+			product	Polymerase basic protein 2
+>Feature NODE_6
+94	852	CDS
+			gene	M
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P05775
+			locus_tag	PROKKA_00004
+			product	Matrix protein 1
+>Feature NODE_10
+>Feature NODE_9
+>Feature NODE_16
+>Feature NODE_5
+1524	28	CDS
+			gene	NP
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:O90385
+			locus_tag	PROKKA_00005
+			product	Nucleoprotein
+>Feature NODE_4
+1500	91	CDS
+			EC_number	3.2.1.18
+			gene	NA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P06820
+			locus_tag	PROKKA_00006
+			product	Neuraminidase
+>Feature NODE_8
+107	475	CDS
+			gene	PA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P03433
+			locus_tag	PROKKA_00007
+			product	Polymerase acidic protein
+>Feature NODE_11
+>Feature NODE_13
+>Feature NODE_3
+1779	76	CDS
+			gene	HA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q8QPL1
+			locus_tag	PROKKA_00008
+			product	Hemagglutinin precursor

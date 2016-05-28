@@ -1,0 +1,62 @@
+[17:39:05] Command: --kingdom Viruses --outdir prokka_test_cfia contigs_5992_cfia.fasta
+[17:39:05] Looking for 'aragorn' - found /home/rodrigo/Software/prokka-1.11/bin/../binaries/linux/aragorn
+[17:39:05] Determined aragorn version is 1.2
+[17:39:05] Looking for 'blastp' - found /usr/bin/blastp
+[17:39:05] Determined blastp version is 2.2
+[17:39:05] Looking for 'cmpress' - found /usr/bin/cmpress
+[17:39:05] Determined cmpress version is 1.1
+[17:39:05] Looking for 'cmscan' - found /usr/bin/cmscan
+[17:39:05] Determined cmscan version is 1.1
+[17:39:05] Looking for 'egrep' - found /bin/egrep
+[17:39:05] Looking for 'find' - found /usr/bin/find
+[17:39:05] Looking for 'grep' - found /bin/grep
+[17:39:05] Looking for 'hmmpress' - found /usr/bin/hmmpress
+[17:39:05] Determined hmmpress version is 3.1
+[17:39:05] Looking for 'hmmscan' - found /usr/bin/hmmscan
+[17:39:05] Determined hmmscan version is 3.1
+[17:39:05] Looking for 'less' - found /usr/bin/less
+[17:39:05] Looking for 'makeblastdb' - found /usr/bin/makeblastdb
+[17:39:05] Determined makeblastdb version is 2.2
+[17:39:05] Looking for 'minced' - found /home/rodrigo/Software/prokka-1.11/bin/../binaries/linux/../common/minced
+[17:39:05] Determined minced version is 1.6
+[17:39:05] Looking for 'parallel' - found /usr/bin/parallel
+[17:39:05] Determined parallel version is 20130922
+[17:39:05] Looking for 'prodigal' - found /home/rodrigo/Software/prokka-1.11/bin/../binaries/linux/prodigal
+[17:39:05] Determined prodigal version is 2.6
+[17:39:05] Looking for 'prokka-genbank_to_fasta_db' - found /home/rodrigo/Software/prokka-1.11/bin/prokka-genbank_to_fasta_db
+[17:39:05] Looking for 'sed' - found /bin/sed
+[17:39:05] Looking for 'tbl2asn' - found /home/rodrigo/Software/prokka-1.11/bin/../binaries/linux/tbl2asn
+[17:39:05] Determined tbl2asn version is 23.2
+[17:39:05] Using genetic code table 1.
+[17:39:05] Loading and checking input file: contigs_5992_cfia.fasta
+[17:39:05] Wrote 17 contigs
+[17:39:05] Predicting tRNAs and tmRNAs
+[17:39:05] Running: aragorn -gc1  -w prokka_test_cfia\/PROKKA_05262016\.fna
+[17:39:05] Found 0 tRNAs
+[17:39:05] Disabling rRNA search: --kingdom=Viruses or --norrna=0
+[17:39:05] Skipping ncRNA search, enable with --rfam if desired.
+[17:39:05] Total of 0 tRNA + rRNA features
+[17:39:05] Searching for CRISPR repeats
+[17:39:06] Found 0 CRISPRs
+[17:39:06] Predicting coding sequences
+[17:39:06] Contigs total 15010 bp, so using meta mode
+[17:39:06] Running: prodigal -i prokka_test_cfia\/PROKKA_05262016\.fna -c -m -g 1 -p meta -f sco -q
+[17:39:06] Found 8 CDS
+[17:39:06] Connecting features back to sequences
+[17:39:06] Not using genus-specific database. Try --usegenus to enable it.
+[17:39:06] Annotating CDS, please be patient.
+[17:39:06] Will use 8 CPUs for similarity searching.
+[17:39:06] There are still 8 unannotated CDS left (started with 8)
+[17:39:06] Will use blast to search against /home/rodrigo/Software/prokka-1.11/bin/../db/kingdom/Viruses/sprot with 8 CPUs
+[17:39:06] Running: cat prokka_test_cfia\/sprot\.faa | parallel --gnu --plain -j 8 --block 230 --recstart '>' --pipe blastp -query - -db /home/rodrigo/Software/prokka-1.11/bin/../db/kingdom/Viruses/sprot -evalue 1e-06 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > prokka_test_cfia\/sprot\.blast 2> /dev/null
+[17:39:06] Deleting unwanted file: prokka_test_cfia/sprot.faa
+[17:39:06] Deleting unwanted file: prokka_test_cfia/sprot.blast
+[17:39:06] Found 8 unique /gene codes.
+[17:39:06] Fixed 0 colliding /gene names.
+[17:39:06] Adding /locus_tag identifiers
+[17:39:06] Assigned 8 locus_tags to CDS and RNA features.
+[17:39:06] Writing outputs to prokka_test_cfia/
+[17:39:06] Generating annotation statistics file
+[17:39:06] Generating Genbank and Sequin files
+[17:39:06] Running: tbl2asn -V b -a r10k -l paired-ends -M n -N 1 -y 'Annotated using prokka 1.11 from http://www.vicbioinformatics.com' -Z prokka_test_cfia\/PROKKA_05262016\.err -i prokka_test_cfia\/PROKKA_05262016\.fsa 2> /dev/null
+[17:39:06] Could not run command: tbl2asn -V b -a r10k -l paired-ends -M n -N 1 -y 'Annotated using prokka 1.11 from http://www.vicbioinformatics.com' -Z prokka_test_cfia\/PROKKA_05262016\.err -i prokka_test_cfia\/PROKKA_05262016\.fsa 2> /dev/null

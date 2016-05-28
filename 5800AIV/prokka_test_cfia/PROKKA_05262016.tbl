@@ -1,0 +1,72 @@
+>Feature len_973_cov_4336.59
+974	615	CDS
+			gene	NS
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q99AU3
+			locus_tag	PROKKA_00001
+			product	Non-structural protein 1
+>Feature len_2426_cov_17.7978
+2369	90	CDS
+			gene	PB2
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q3HM41
+			locus_tag	PROKKA_00002
+			product	Polymerase basic protein 2
+>Feature len_1489_cov_480.681
+1466	57	CDS
+			EC_number	3.2.1.18
+			gene	NA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P06820
+			locus_tag	PROKKA_00003
+			product	Neuraminidase
+>Feature len_1173_cov_2806.5
+424	143	CDS
+			gene	M_1
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P03492
+			locus_tag	PROKKA_00004
+			product	Matrix protein 2
+1124	366	CDS
+			gene	M_2
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P05775
+			locus_tag	PROKKA_00005
+			product	Matrix protein 1
+>Feature len_321_cov_0.92623
+>Feature len_734_cov_1.5449
+132	365	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00006
+			product	hypothetical protein
+>Feature len_252_cov_0.834286
+>Feature len_310_cov_1.27039
+>Feature len_1567_cov_33.3725
+47	1543	CDS
+			gene	NP
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:O90385
+			locus_tag	PROKKA_00007
+			product	Nucleoprotein
+>Feature len_1341_cov_59.3829
+1238	48	CDS
+			EC_number	2.7.7.48
+			gene	PB1
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q3HM40
+			locus_tag	PROKKA_00008
+			product	RNA-directed RNA polymerase catalytic subunit
+>Feature len_1862_cov_331.194
+60	1763	CDS
+			gene	HA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q8QPL1
+			locus_tag	PROKKA_00009
+			product	Hemagglutinin precursor
+>Feature len_523_cov_4.83857
+93	461	CDS
+			gene	PA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P03433
+			locus_tag	PROKKA_00010
+			product	Polymerase acidic protein
