@@ -1,0 +1,26 @@
+Basically, after genome assembly a script could be written to take the assembled file and Blast the highest depth of coverage contigs ( top 10 or something). 
+# This can probably be done using a regex to search coverage data from FASTA header or from a table from Geneious that provides this output 
+
+This could then be put into a table as a quick report (strain ID for each segment).
+# Table: Contig ID + strain ID from Top BLAST hit 
+
+~Finally, to take it one step further annotating the contigs based on the BLAST hits and identify the coverage location would be helpful.~
+# Done
+
+Yohannes generally is interested in reporting the closest match using BLAST, not the best use of all the data but a fast answer for diagnostic purposes.
+
+# Done. See above
+
+With respect to coverage, Yohannes likes to build phylogenetic trees with the data
+# Maybe this should be automated too
+
+So generally once we have the top BLAST hit, we export the nucleotide segments in a FASTA format , preferably in the correct orientation.  
+# Double check this
+
+The coordinates of each gene can be useful if we don't achieve full coverage, eg: PB2 233-2310 would be useful if it was not full length so we know what we are missing.
+# Parsable from BLAST output
+
+# Algorithm
+1. Annotate contigs with Prokka
+2. BLAST annotated segments vs. nt or Influenza A virus
+3. Report: QueryID, HitID, HitDesc, Range, Coverage 
