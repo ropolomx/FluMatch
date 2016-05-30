@@ -41,8 +41,7 @@ def prokka_annotate(handle):
 
     prokka = ('prokka', '--kingdom', 'Viruses', '--outdir',
     'prokka_annotation_script')
-    return subprocess.Popen(prokka, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-            shell=True)
+    return subprocess.Popen(prokka)
 
 #def blastn_top(contig):
 
