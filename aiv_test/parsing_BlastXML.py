@@ -15,33 +15,25 @@ import sys
 def arguments():
 
     parser = argparse.ArgumentParser() 
-    #parser.add_argument('--blast-database', default = None, help = 'Path to database to BLAST your contigs against')
+    parser.add_argument('--blast-database', default = None, help = 'Path to database to BLAST your contigs against')
 
     parser.add_argument('contigs', help = 'FASTA formatted file with contig sequences')
 
-#    parser.add_argument('--top-results', default = None, help = 'Number of top BLAST hits to report for each contig')
+    # parser.add_argument('--top-results', default = None, help = 'Number of top BLAST hits to report for each contig')
 
     return parser.parse_args()
 
 def handle_input(filepath):
     
-#    if sample_name:
-#        name = sample_name 
-#    elif filepath != '-':
-    name = os.path.splitext(os.path.basename(filepath))[0]
-#    else:
-#        name = 'stdin'
-
-    f = open (filepath)
-
-    with f as o:
-        return o.read(), name
+    with open(filepath, 'r') as f:
+        read_data = f.read()
+        #os.listdir(
+    return read_data
 
 def prokka_annotate(handle):
 
-    prokka = ('prokka', '--kingdom', 'Viruses', '--outdir',
-    'prokka_annotation_script')
-    return subprocess.Popen(prokka)
+    return subprocess.call(['prokka', '--kingdom', 'Viruses', '--outdir',
+    'prokka_annotation_script', handle])
 
 #def blastn_top(contig):
 
