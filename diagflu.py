@@ -54,6 +54,8 @@ def prokka_annotate(prokka_dir, fasta, cores):
               fasta)
 
     subprocess.call(prokka) 
+    
+    return os.path.join(prokka_dir, strain, strain + '.ffn')
 
 def blast(query, blastdb, cores):
 
@@ -120,7 +122,7 @@ def main():
     
     annotations = prokka_annotate(args.prokka_dir, args.contigs, args.cores)
     
-    blast_result = blast(args.contigs, args.blast_database, args.cores)
+    blast_result = blast(annotations, args.blast_database, args.cores)
 
     blast_report(args.report_out, blast_result, args.top_hits)
 
