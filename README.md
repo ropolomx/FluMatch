@@ -9,15 +9,14 @@ In order to run this script, you would need to have the following installed on y
 
 1. __Python 2.7__
 
-  Tip for Windows users: installing the [Anaconda distribution](https://www.continuum.io/downloads) is strongly recommended
-
 2. __NCBI BLAST+__
   
   This is the standalone version of BLAST that you can run locally on your machine. `diagflu.py` calls the `blastn` algorithm.
-  
-  For Windows users: download the `ncbi-blast-2.3.0+-win64.exe` file from ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
-  
 
+  Instructions for Linux:
+
+  `sudo apt-get install ncbi-blast+`
+  
 3. __Prokka: microbial annotation software__
   
   Please follow the installation instructions in the official [Prokka repository](https://github.com/tseemann/prokka)

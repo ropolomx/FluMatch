@@ -71,13 +71,17 @@ def blast(query, blastdb, cores):
 def tabulate_hsp_xml(result, num_top_results):
 
     for res in result:
-        for aln in res.alignments[:num_top_results]:
+        for aln in res.alignments[0:num_top_results]:
             for hsp in aln.hsps:
 
                 query = res.query
 
                 strain = re.sub(r'\s+','_', re.sub(r'gnl\|(\w*|\W*)\|\d*\s','',
                                 aln.title.strip()))
+
+                query_start = hsp.query_start
+
+                query_end = hsp.query_end
 
                 sbjct_start = hsp.sbjct_start
 
@@ -97,13 +101,13 @@ def tabulate_hsp_xml(result, num_top_results):
 
                 e_value = hsp.expect
 
-                yield (query, strain, sbjct_start, sbjct_end,
-                       identities, query_cov, identity_perc, length, e_value)
+                yield (query, strain, query_start, query_end, sbjct_start, sbjct_end,
+                       identities, length, query_cov, identity_perc, e_value)
 
 def blast_report(reportpath, result, num_top_results):
 
-    headers = ['Query','Strain','SubjStart','SubjEnd', 'Identities',
-               'QueryCoverage','PercentID','Length','e-value']
+    headers = ['Query','Matching Strains','Query Start', 'Query End', 'Subject Start','Subject End', 'Identities', 'Length',
+               'QueryCoverage','PercentID','e-value']
     
     with open(reportpath,'w') as f:
         
