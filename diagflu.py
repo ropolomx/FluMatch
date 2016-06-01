@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 ###################################################################
-##### Diagflu: a script to automate annotation and search of #####
-############## the closest strain match of AIV contigs ############
+##### Diagflu: a script to automate annotation and search of ######
+############## the closest strain match of contigs ################
 ###################################################################
 
 from Bio import SeqIO
