@@ -1,91 +1,128 @@
 #!/usr/bin/env python
 
 ###################################################################
-##### Diagflu: a script to automate annotation and search of #####  
+##### Diagflu: a script to automate annotation and search of #####
 ############## the closest strain match of AIV contigs ############
 ###################################################################
 
 from Bio import SeqIO
 from Bio.Blast import NCBIXML
 # from Bio.Blast.Applications import NcbiblastnCommandline
+from multiprocessing import cpu_count
+from StringIO import StringIO
 import subprocess
 import re
 import os
 import argparse
 import glob
+import csv
 
 def arguments():
 
-    parser = argparse.ArgumentParser() 
+    parser = argparse.ArgumentParser()
 
-    parser.add_argument('--blast-database', required = True, default = None, help = 'Path to database to BLAST your contigs against')
+    parser.add_argument('--blast-database', required=True,
+                        help='Path to database to BLAST your contigs against')
+
+    parser.add_argument('--top-hits', type=int, default=10,
+                        help='Number of top BLAST hits to report for each contig [10]')
+
+    parser.add_argument('--prokka-dir', default='./', help = 'Directory for prokka files')
+    
+    parser.add_argument('--report-out', default='./TopBLASTHits.txt', help='Output filename')
+    
+    parser.add_argument('--cores', type=int, default=cpu_count(),
+                        help='Number of CPU cores to use [all]')
 
     parser.add_argument('contigs', help = 'FASTA formatted file with contig sequences')
-
-    parser.add_argument('--top-hits', required = True, default = None, help = 'Number of top BLAST hits to report for each contig')
-
-    parser.add_argument('--prokka-dir', help = 'Directory for prokka files')
-
+ 
     return parser.parse_args()
 
-def prokka_annotate(prokka_dir, fasta):
+def strain_name(fasta):
+    return os.path.splitext(os.path.basename(fasta))[0]
 
-    prokka = subprocess.call(['prokka', '--kingdom', 'Viruses',\
-            '--outdir', prokka_dir, fasta]) # outdir should be strain name or sequence run ID; also set prefix and locustag to strain name
+def prokka_annotate(prokka_dir, fasta, cores):
 
-    return prokka 
+    strain = strain_name(fasta)
 
+    prokka = ('prokka',
+              '--kingdom', 'Viruses',
+              '--outdir', os.path.join(prokka_dir, strain),
+              '--prefix', strain,
+              '--locustag', strain,
+              '--cpus', str(cores),
+              fasta)
 
-def get_top_blastn_hit(num_top_results, blastdb):
+    subprocess.call(prokka) 
 
-    # prokka_ffn = glob.iglob('./prokka_annotation/*.ffn')
-    # os.walk
+def blast(query, blastdb, cores):
+
     blastn = ('blastn',
-              '-query', prokka_dir,
+              '-query', query,
               '-db', blastdb,
-              '-outfmt', '5')
+              '-outfmt', '5',
+              '-num_threads', str(cores))
 
     blastn_out = subprocess.check_output(blastn)
+
+    return NCBIXML.parse(StringIO(blastn_out))
+
+
+def tablulate_hsp_xml(result, num_top_results):
+
+    for res in result:
+        for aln in res.alignments[:num_top_results]:
+            for hsp in aln.hsps:
+
+                query = hsp.query
+
+                strain = re.sub(r'\s+','_', re.sub(r'gnl\|(\w*|\W*)\|\d*\s','',
+                                aln.title.strip()))
+
+                sbjct_start = hsp.sbjct_start
+
+                sbjct_end = hsp.sbjct_end
+
+                identities = hsp.identities
+
+                length = hsp.align_length
+
+                slen = hsp.sbjct_end - (hsp.sbjct_start - 1)
+                qlen = hsp.query_end - (hsp.query_start - 1)
+
+
+                query_cov =  abs(100. * slen / qlen)
+
+                identity_perc = 100. * identities / length
+
+                e_value = hsp.expect
+
+                yield (query, strain, sbjct_start, sbjct_end,
+                       identities, query_cov, identity_perc, length, e_value)
+
+def blast_report(reportpath, result, num_top_results):
+
+    headers = ['Query','Strain','SubjStart','SubjEnd', 'Identities',
+               'QueryCoverage','PercentID','Length','e-value']
     
-    results = NCBIXML.read(StringIO(blastn_out))
+    with open(reportpath,'w') as f:
+        
+        out = csv.writer(f, delimiter='\t')
+        
+        out.writerow(headers)
 
-    with open('TopBLASTHits.txt','w') as f:
-
-        f.write('\t'.join(['Query','Strain','SubjStart','SubjEnd',\
-                'Identities','QueryCoverage','PercentID','Length',\
-                 'e-value']))
-        f.write('\n')
-        for res in results:
-            for aln in res.alignments[0:int(num_top_results)]:
-                for hsp in aln.hsps:
-                    res_query = res.query
-                    strain=aln.title
-                    strain=re.sub(r'gnl\|(\w*|\W*)\|\d*\s','',strain)
-                    sbjct_start=hsp.sbjct_start
-                    sbjct_end=hsp.sbjct_end
-                    identities=hsp.identities
-                    query_cover=(float(hsp.sbjct_end)-\
-                            float(hsp.sbjct_start-1))/\
-                            (float(hsp.query_end)-float(hsp.query_start\
-                            -1))*100
-                    identity_perc=float(hsp.identities)/\
-                            float(hsp.align_length)*100
-                    length=hsp.align_length
-                    e_value=hsp.expect
-        f.write('\t'.join([str(res_query),str(strain),str(sbjct_start),\
-                str(sbjct_end),str(identities),str(query_cover),\
-                str(identity_perc),str(e_value)]))
-        f.write('\n')
-
-    report = f
-
-    return report
+        for hsp in tablulate_hsp_xml(result, num_top_results):
+            out.writerow(hsp)
 
 def main():
- 
+
     args = arguments()
-    annotations = prokka_annotate(args.prokka_dir, args.contigs)
-    top_hits = get_top_blastn_hit(args.top_hits, args.blast_database)
+    
+    annotations = prokka_annotate(args.prokka_dir, args.contigs, args.cores)
+    
+    blast_result = blast(args.contigs, args.blast_database, args.cores)
+
+    blast_report(args.report_out, blast_result, args.top_hits)
 
 if __name__ == '__main__':
     main()
