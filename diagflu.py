@@ -7,14 +7,13 @@
 
 from Bio import SeqIO
 from Bio.Blast import NCBIXML
-# from Bio.Blast.Applications import NcbiblastnCommandline
 from multiprocessing import cpu_count
 from StringIO import StringIO
 import subprocess
 import re
 import os
 import argparse
-import glob
+import fnmatch
 import csv
 
 def arguments():
@@ -58,7 +57,7 @@ def prokka_annotate(prokka_dir, fasta, cores):
 def blast(query, blastdb, cores):
 
     blastn = ('blastn',
-              '-query', query,
+              '-query', query, 
               '-db', blastdb,
               '-outfmt', '5',
               '-num_threads', str(cores))
@@ -118,7 +117,7 @@ def main():
 
     args = arguments()
     
-    annotations = prokka_annotate(args.prokka_dir, args.contigs, args.cores)
+    # annotations = prokka_annotate(args.prokka_dir, args.contigs, args.cores)
     
     blast_result = blast(args.contigs, args.blast_database, args.cores)
 
