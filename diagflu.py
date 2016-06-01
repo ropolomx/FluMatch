@@ -22,12 +22,12 @@ def arguments():
     parser.add_argument('--blast-db', required=True,
                         help='Path to local database to BLAST your contigs against')
 
-    parser.add_argument('--top-hits', type=int, default=10,
+    parser.add_argument('-t', '--top-hits', type=int, default=10,
                         help='Number of top BLAST hits to report for each contig [10]')
 
-    parser.add_argument('--prokka-dir', default='./', help = 'Directory for prokka files')
+    parser.add_argument('-p', '--prokka-dir', default='./', help = 'Directory for prokka files')
     
-    parser.add_argument('--report-out', default='./TopBLASTHits.txt', help='Output filename')
+    parser.add_argument('-r', '--report-out', default='./TopBLASTHits.txt', help='Output filename')
     
     parser.add_argument('--cores', type=int, default=cpu_count(),
                         help='Number of CPU cores to use [all]')
