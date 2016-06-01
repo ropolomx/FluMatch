@@ -22,7 +22,7 @@ def arguments():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--blast-database', required=True,
-                        help='Path to database to BLAST your contigs against')
+                        help='Path to local database to BLAST your contigs against')
 
     parser.add_argument('--top-hits', type=int, default=10,
                         help='Number of top BLAST hits to report for each contig [10]')
@@ -68,13 +68,13 @@ def blast(query, blastdb, cores):
     return NCBIXML.parse(StringIO(blastn_out))
 
 
-def tablulate_hsp_xml(result, num_top_results):
+def tabulate_hsp_xml(result, num_top_results):
 
     for res in result:
         for aln in res.alignments[:num_top_results]:
             for hsp in aln.hsps:
 
-                query = hsp.query
+                query = res.query
 
                 strain = re.sub(r'\s+','_', re.sub(r'gnl\|(\w*|\W*)\|\d*\s','',
                                 aln.title.strip()))
@@ -111,7 +111,7 @@ def blast_report(reportpath, result, num_top_results):
         
         out.writerow(headers)
 
-        for hsp in tablulate_hsp_xml(result, num_top_results):
+        for hsp in tabulate_hsp_xml(result, num_top_results):
             out.writerow(hsp)
 
 def main():
