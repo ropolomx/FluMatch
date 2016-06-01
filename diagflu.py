@@ -13,14 +13,13 @@ import subprocess
 import re
 import os
 import argparse
-import fnmatch
 import csv
 
 def arguments():
 
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--blast-database', required=True,
+    parser.add_argument('--blast-db', required=True,
                         help='Path to local database to BLAST your contigs against')
 
     parser.add_argument('--top-hits', type=int, default=10,
@@ -38,7 +37,7 @@ def arguments():
     return parser.parse_args()
 
 def strain_name(fasta):
-    return os.path.splitext(os.path.basename(fasta))[0]
+        return os.path.splitext(os.path.basename(fasta))[0]
 
 def prokka_annotate(prokka_dir, fasta, cores):
 
@@ -119,9 +118,9 @@ def main():
 
     args = arguments()
     
-    # annotations = prokka_annotate(args.prokka_dir, args.contigs, args.cores)
+    annotations = prokka_annotate(args.prokka_dir, args.contigs, args.cores)
     
-    blast_result = blast(annotations, args.blast_database, args.cores)
+    blast_result = blast(annotations, args.blast_db, args.cores)
 
     blast_report(args.report_out, blast_result, args.top_hits)
 
