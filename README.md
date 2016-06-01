@@ -37,4 +37,4 @@ In order to run this script, you would need to have the following installed on y
 
 ## Sample data
 
-The folder contains the 8 segments of the A/swine/La/Habana/130/2010/H1N1 strain, as well as Prokka output and an example report. 
+The folder contains the file `La_Habana_test.fasta` which contains the 8 segments of the A/swine/La/Habana/130/2010/H1N1 strain.
