@@ -41,6 +41,6 @@ The folder contains the following files and directories
 
 * `La_Habana_test.fasta` which contains the 8 segments of the A/swine/La/Habana/130/2010/H1N1 strain.
 
-* `TopBLASThits.txt`: an example report of the BLAST report of the annotated strain. The version of blastn used for this was 2.2.28+ 
+* `TopBLASThits.txt`: an example report of the BLAST report of the annotated strain. The version of `blastn` used for this was `2.2.28+`
 
-* A directory called __La\_Habana\_test__ that has the output of the Prokka annotation process
+* A directory called __La\_Habana\_test__ that has the output of the __Prokka annotation process__
