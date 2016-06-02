@@ -1,0 +1,1372 @@
+Seq-entry ::= set {
+  class genbank ,
+  seq-set {
+    set {
+      class nuc-prot ,
+      descr {
+        source {
+          org {
+            taxname "Genus species" ,
+            orgname {
+              mod {
+                {
+                  subtype strain ,
+                  subname "strain" } } ,
+              gcode 1 } } } ,
+        user {
+          type
+            str "NcbiCleanup" ,
+          data {
+            {
+              label
+                str "method" ,
+              data
+                str "SeriousSeqEntryCleanup" } ,
+            {
+              label
+                str "version" ,
+              data
+                int 7 } ,
+            {
+              label
+                str "month" ,
+              data
+                int 6 } ,
+            {
+              label
+                str "day" ,
+              data
+                int 2 } ,
+            {
+              label
+                str "year" ,
+              data
+                int 2016 } } } ,
+        create-date
+          std {
+            year 2016 ,
+            month 6 ,
+            day 2 } } ,
+      seq-set {
+        seq {
+          id {
+            local
+              str "HE584753.1" } ,
+          descr {
+            molinfo {
+              biomol genomic } ,
+            comment "Annotated using prokka 1.11 from
+ http://www.vicbioinformatics.com" } ,
+          inst {
+            repr raw ,
+            mol dna ,
+            length 2280 ,
+            seq-data
+              iupacna "ATGGAGAGAATAAAAGAACTGAGAGATCTAATGTCGCAGTCCCGCACTCGCGAGA
+TAATCACTAAGACCACTGTGGACCATATGGCCATAATCAAAAAGTACACATCAGGAAGGCAAGAGAAGAACCCCGCAC
+TCAGAATGAAGTGGATGATGGCAATGAGATACCCAATTACAGCAGACAAGAGAATAATGGACATGATTCCGGAGAGGA
+ATGAACAAGGACAAACCCTCTGGAGCAAAACAAACGATGCTGGATCAGACCGAGTGATGGTATCACCTCTGGCCGTGA
+CATGGTGGAACAGAAATGGCCCAACAACAAGTACAGTTCATTACCCTAAGGTATATAAAACTTATTTCGAAAAGGTCG
+AAAGGTTGAAACATGGTACCTTCGGCCCTGTCCACTTCAGAAAGCAAGTTAAAATAAGGAGGAGAGTTGATACAAACC
+CTGGCCATGCAGATCTCAGTGCCAAGGAGGCACAGGATGTGTTTATGGAAGTTGTTTTCCCAAATGAAGTGGGGGCAA
+GAATACTGACATCAGAGTCACAGCTGGCAATAACAAAAGAGAAGAAAGAAGAGCTCCAGGATTGTAAAATTGCTCCAT
+TGATGGTGGCGCACATGCTAGAAAGAGAATTGGTCCGTAAAACAAGGTTTCTCCCAGTAGCCGGTGGAACAGGCAGTG
+TTTATATTGAATTGTTGCACTTAACCCAAGGGACGTGCTGGGAGCAGATGTACACTCCAGGAGGAGAAGTGAGAAATG
+ATGATGTTGACCAAAGTTTGATTATCGCTGCTAGAAACATAGTAAGAAGAGCAGCAGTGTCAGCAGACCCATTAGCAT
+CTCTCTTGGAAATGTGCCACAGCACACAGATTGGAGGAGTAAGGATGGTGGACATCCTTAGACAGAATCCAACTGAGG
+AACAAGCCGTAGACATATGCAAGGCAGCAATAGGGTTGAGGATTAGCTCATCTTTCAGTTTTGGTGGGTTCACTTTCA
+AAAGGACAAGCGGATCATCAGTCAAGAAAGAAGAAGAAGTGCTAACGGGCAACCTCCAAACACTGAAAATAAGAGTAC
+ATGAAGGGTATGAAGAATTCACAATGGTTGGGAGAAGAGCAACAGCTATTCTCAGAAAGGCAACCAGGAGATTGATCC
+AGTTGATAGTAAGCGGGAGAGACGATCAGTCAATTGCTGAGGCAATAATTGTGGCCATGGTATTCTCACACGAGGATT
+GCATGATCAAGGCAGTTAGGGGCGATCTAAACTTTGTCAATAGGGCAAACCAGCGACTGAACCCCATGCATCAACTCT
+TGAGGCATTTCCAAAAAGATGCAAAAGTGCTTTTCCAGAACTGGGGAATTGAATCCATTGACAATGTGATGGGAATGA
+TCGGAATACTGCCCGACATGACCCCAAGTACAGAGATGTCAATGAGAGGGATAAGAGTCAGCAAAATGGGAGTAGATG
+AATACTCCAGCACGGAGAGAGTGGTAGTGAGAATTGACCGATTTTTAAGGGTTAGAGATCAAAGAGGGAACGTACTAT
+GGTCTCCCGAAGAAGTCAGTGAAACGCAAGGAACTGAGAGGTTGACAATAACTTGTTCGTCCTCAATGATGTGGGAGA
+TCAATGGCCCTGAGTCAGTGCTCGTCAACAGTTATCAATGGATAATCAGGAACTGGGAAATTGTGAAAATTCAATGGT
+CACAAGATCCCACAATGTTATACAACAAAATGGAATTTGAACCATTTCAGTCTCTTGTCCCTAAGGCAACCAGAAGCC
+GGTACAGTGGATTCGTAAGGACACTGTTCCAGCAAATGCGGGATGTGCTTGGGACATTTGACACTGTCCAAATAATAA
+AACTTCTCCCCTTTGCTGCTGCTCCACCAGAACAGAGTAGGATGCAATTTTCCTCATTGACTGTGAATGTGAGAGGAT
+CAGGGTTGAGGATACTGGTAAGAGGCAATTCTCCAGTATTCAATTACAACAAGGCAACCAAACGACTTACAGTTCTTG
+GAAAGGATGGAGGTGCATTGACTGAAGATCCAGATGAAGGCACATCTGGGGTGGAGTCTGCTGTCCTGAGAGGATTTC
+TCATTTTCGACAAAGAAGACAAGAGATATGACCTAGCATTAAGCATCAATGAACTGAGCAATCTTGCAAAAGGAGAGA
+AGGCTAATGTGCTAATTGGGCAAGGGGACGTAGTGTTGGTAATGAAACGAAAACGGGACTCTAGCATACTTACTGACA
+GCCAGACAGCGACCAAAAGAATTCGGATGGCCATCAATTAG" } } ,
+        seq {
+          id {
+            local
+              str "HE584753.1_1" } ,
+          descr {
+            title "Polymerase basic protein 2 [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 759 ,
+            seq-data
+              ncbieaa "MERIKELRDLMSQSRTREIITKTTVDHMAIIKKYTSGRQEKNPALRMKWMMAMRY
+PITADKRIMDMIPERNEQGQTLWSKTNDAGSDRVMVSPLAVTWWNRNGPTTSTVHYPKVYKTYFEKVERLKHGTFGPV
+HFRKQVKIRRRVDTNPGHADLSAKEAQDVFMEVVFPNEVGARILTSESQLAITKEKKEELQDCKIAPLMVAHMLEREL
+VRKTRFLPVAGGTGSVYIELLHLTQGTCWEQMYTPGGEVRNDDVDQSLIIAARNIVRRAAVSADPLASLLEMCHSTQI
+GGVRMVDILRQNPTEEQAVDICKAAIGLRISSSFSFGGFTFKRTSGSSVKKEEEVLTGNLQTLKIRVHEGYEEFTMVG
+RRATAILRKATRRLIQLIVSGRDDQSIAEAIIVAMVFSHEDCMIKAVRGDLNFVNRANQRLNPMHQLLRHFQKDAKVL
+FQNWGIESIDNVMGMIGILPDMTPSTEMSMRGIRVSKMGVDEYSSTERVVVRIDRFLRVRDQRGNVLWSPEEVSETQG
+TERLTITCSSSMMWEINGPESVLVNSYQWIIRNWEIVKIQWSQDPTMLYNKMEFEPFQSLVPKATRSRYSGFVRTLFQ
+QMRDVLGTFDTVQIIKLLPFAAAPPEQSRMQFSSLTVNVRGSGLRILVRGNSPVFNYNKATKRLTVLGKDGGALTEDP
+DEGTSGVESAVLRGFLIFDKEDKRYDLALSINELSNLAKGEKANVLIGQGDVVLVMKRKRDSSILTDSQTATKRIRMA
+IN" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 2 ,
+                    data
+                      prot {
+                        name {
+                          "Polymerase basic protein 2" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 758 ,
+                        id
+                          local
+                            str "HE584753.1_1" } } } } } } } ,
+      annot {
+        {
+          data
+            ftable {
+              {
+                id
+                  local
+                    id 1 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 1 } } ,
+                product
+                  whole
+                    local
+                      str "HE584753.1_1" ,
+                location
+                  int {
+                    from 0 ,
+                    to 2279 ,
+                    strand plus ,
+                    id
+                      local
+                        str "HE584753.1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:2.6" } ,
+                  {
+                    qual "inference" ,
+                    val "similar to AA sequence:UniProtKB:Q3HM41" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus "PB2" ,
+                        locus-tag "La_Habana_test_00001" } } } } } } } } ,
+    set {
+      class nuc-prot ,
+      descr {
+        source {
+          org {
+            taxname "Genus species" ,
+            orgname {
+              mod {
+                {
+                  subtype strain ,
+                  subname "strain" } } ,
+              gcode 1 } } } ,
+        user {
+          type
+            str "NcbiCleanup" ,
+          data {
+            {
+              label
+                str "method" ,
+              data
+                str "SeriousSeqEntryCleanup" } ,
+            {
+              label
+                str "version" ,
+              data
+                int 7 } ,
+            {
+              label
+                str "month" ,
+              data
+                int 6 } ,
+            {
+              label
+                str "day" ,
+              data
+                int 2 } ,
+            {
+              label
+                str "year" ,
+              data
+                int 2016 } } } ,
+        create-date
+          std {
+            year 2016 ,
+            month 6 ,
+            day 2 } } ,
+      seq-set {
+        seq {
+          id {
+            local
+              str "HE584754.1" } ,
+          descr {
+            molinfo {
+              biomol genomic } ,
+            comment "Annotated using prokka 1.11 from
+ http://www.vicbioinformatics.com" } ,
+          inst {
+            repr raw ,
+            mol dna ,
+            length 2379 ,
+            seq-data
+              iupacna "ATGGATGTCAATCCGACTCTACTTTTCCTAAAAGTTCCAGCGCAAAATGCCATAA
+GCACCACATTCCCTTATACTGGAGATCCTCCATACAGCCATGGAACAGGAACAGGATACACCATGGACACAGTAAACA
+GAACACACCAATACTCAGAAAAGGGAAAGTGGACGACAAACACAGAGACTGGTGCACCCCAGCTCAACCCGATTGATG
+GACCACTACCTGAGGATAATGAACCAAGTGGGTATGCACAAACAGACTGTGTTCTAGAGGCTATGGCTTTCCTTGAAG
+AATCCCACCCAGGAATATTTGAGAATTCATGCCTTGAAACAATGGAAGTTGTTCAACAAACAAGGGTAGATAAACTAA
+CTCAAGGTCGCCAGACTTATGATTGGACATTAAACAGAAATCAACCGGCCGCGACTGCATTGGCCAACACCATAGAAG
+TCTTTAGATCGAATGGCCTAACAGCTAATGAGTCAGGAAGGCTAATAGATTTCTTAAAGGATGTAATGGAATCAATGA
+ACAAAGAGGAAATAGAGATAACAACCCACTTTCAAAGAAAAAGGAGAGTAAGAGACAACATGACCAAGAAGATGATCA
+CGCAAAGAACAATAGGGAAGAAAAAACAAAGATTGAATAAGAGAGGCTATCTAATAAGAGCACTGACATTAGATACGA
+TGACCAAAGATGCAGAGAGAGGCAAGTTAAAAAGAAGGGCTATCGCAACACCTGGGATGCAGATTAGAGGTTTCGTAT
+ACTTTGTTGAAACTTTAGCTAGGAGCATTTGCGAAAAGCTTGAACAGTCTGGGCTCCCAGTAGGGGGCAATGAAAAGA
+AGGCCAAACTGGCAAATGTTGTGAGAAAGATGATGACTAATTCACAAGACACAGAGATTTCTTTCACAATCACTGGGG
+ACAACACTAAGTGGAATGAAAATCAAAATCCTCGAATGTTCCTGGCGATGATTACATATATCACCAGAGATCAACCCG
+AGTGGTTCAGAAACATCCTGAGCATGGCACCCATAATGTTCTCAAACAAAATGGCAAGACTAGGGAAAGGGTACATGT
+TCGAGAGTAAAAGAATGAAGATTCGAACACAAATACCAGCAGAAATGCTAGCAAGCATTGACCTGAAGTACTTCAATG
+AATCAACAAAGAGGAAAATTGAGAAAATAAGACCTCTTCTAATAGATGGCACAGCATCACTGAGTCCTGGAATGATGA
+TGGGCATGTTCAACATGCTAAGTACGGTCTTGGGAGTCTCGATACTGAATCTTGGACAAAAGAAATACACCAAGACAA
+CATACTGGTGGGATGGGCTCCAATCATCCGACGATTTTGCTCTCATAGTGAATGCACCAAACCATGAGGGAATACAAG
+CAGGAGTGGACAGATTCTACAGGACTTGCAAGTTAGTGGGAATCAACATGAGCAAAAAGAAATCCTATATAAATAAGA
+CAGGGACATTTGAATTCACAAGCTTTTTTTATCGCTATGGATTTGTGGCTAATTTTAGCATGGAGCTACCCAGCTTTG
+GAGTGTCTGGAGTAAATGAATCAGCTGACATGAGTATTGGAGTAACAGTGATAAAGAACAACATGATAAACAATGACC
+TTGGACCTGCAACGGCCCAGATGGCTCTTCAATTGTTCATCAAAGACTACAGATACACATATAGGTGCCATAGGGGAG
+ACACACAAATTCAGACGAGAAGGTCATTTGAGTTGAAGAAGCTGTGGGATCAAACCCAATCAAAGGTAGGGCTATTAG
+TATCAGATGGAGGACCAAACTTATACAATATACGGAATCTTCACATTCCTGAAGTCTGCTTAAAATGGGAGCTAATGG
+ATGATGATTATCGGGGAAGACTTTGTAATCCCCTGAATCCCTTTGTCAGTCATAAAGAGATTGATTCTGTAAACAATG
+CTGTGGTAATGCCAGCCCATGGTCCAGCCAAAAGCATGGAATATGATGCCGTTGCAACTACACATTCCTGGATTCCCA
+AGAGGAATCGTTCTATTCTCAACACAAGCCAAAGGGGAATTCTTGAGGATGAACAGATGTACCAGAAGTGCTGCAATC
+TATTCGAGAAATTTTTCCCTAGCAGTTCATATAGGAGACCGGTTGGAATTTCTAGCATGGTGGAGGCCATGGTGTCTA
+GGGCCCGGATTGATGCCAGGGTCGACTTCGAGTCTGGACGGATCAAGAAAGAAGAGTTCTCTGAGATCATGAAGATCT
+GTTCCACCATTGAAGAACTCAGACGGCAAAAATAATGAATTGAGAATTCAACTTGAAACGTACTGTTAGAGGGATCTT
+GGGGGGGAAAAAAAAAAAAAAACGGCGGAGGCAGGGAGGGAAGGGGGGTGTAGAAGCAAAAC" } } ,
+        seq {
+          id {
+            local
+              str "HE584754.1_1" } ,
+          descr {
+            title "RNA-directed RNA polymerase catalytic subunit [Genus
+ species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 757 ,
+            seq-data
+              ncbieaa "MDVNPTLLFLKVPAQNAISTTFPYTGDPPYSHGTGTGYTMDTVNRTHQYSEKGKW
+TTNTETGAPQLNPIDGPLPEDNEPSGYAQTDCVLEAMAFLEESHPGIFENSCLETMEVVQQTRVDKLTQGRQTYDWTL
+NRNQPAATALANTIEVFRSNGLTANESGRLIDFLKDVMESMNKEEIEITTHFQRKRRVRDNMTKKMITQRTIGKKKQR
+LNKRGYLIRALTLDTMTKDAERGKLKRRAIATPGMQIRGFVYFVETLARSICEKLEQSGLPVGGNEKKAKLANVVRKM
+MTNSQDTEISFTITGDNTKWNENQNPRMFLAMITYITRDQPEWFRNILSMAPIMFSNKMARLGKGYMFESKRMKIRTQ
+IPAEMLASIDLKYFNESTKRKIEKIRPLLIDGTASLSPGMMMGMFNMLSTVLGVSILNLGQKKYTKTTYWWDGLQSSD
+DFALIVNAPNHEGIQAGVDRFYRTCKLVGINMSKKKSYINKTGTFEFTSFFYRYGFVANFSMELPSFGVSGVNESADM
+SIGVTVIKNNMINNDLGPATAQMALQLFIKDYRYTYRCHRGDTQIQTRRSFELKKLWDQTQSKVGLLVSDGGPNLYNI
+RNLHIPEVCLKWELMDDDYRGRLCNPLNPFVSHKEIDSVNNAVVMPAHGPAKSMEYDAVATTHSWIPKRNRSILNTSQ
+RGILEDEQMYQKCCNLFEKFFPSSSYRRPVGISSMVEAMVSRARIDARVDFESGRIKKEEFSEIMKICSTIEELRRQK
+" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 4 ,
+                    data
+                      prot {
+                        name {
+                          "RNA-directed RNA polymerase catalytic subunit" } ,
+                        ec {
+                          "2.7.7.48" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 756 ,
+                        id
+                          local
+                            str "HE584754.1_1" } } } } } } } ,
+      annot {
+        {
+          data
+            ftable {
+              {
+                id
+                  local
+                    id 3 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 1 } } ,
+                product
+                  whole
+                    local
+                      str "HE584754.1_1" ,
+                location
+                  int {
+                    from 0 ,
+                    to 2273 ,
+                    strand plus ,
+                    id
+                      local
+                        str "HE584754.1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:2.6" } ,
+                  {
+                    qual "inference" ,
+                    val "similar to AA sequence:UniProtKB:Q3HM40" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus "PB1" ,
+                        locus-tag "La_Habana_test_00002" } } } } } } } } ,
+    set {
+      class nuc-prot ,
+      descr {
+        source {
+          org {
+            taxname "Genus species" ,
+            orgname {
+              mod {
+                {
+                  subtype strain ,
+                  subname "strain" } } ,
+              gcode 1 } } } ,
+        user {
+          type
+            str "NcbiCleanup" ,
+          data {
+            {
+              label
+                str "method" ,
+              data
+                str "SeriousSeqEntryCleanup" } ,
+            {
+              label
+                str "version" ,
+              data
+                int 7 } ,
+            {
+              label
+                str "month" ,
+              data
+                int 6 } ,
+            {
+              label
+                str "day" ,
+              data
+                int 2 } ,
+            {
+              label
+                str "year" ,
+              data
+                int 2016 } } } ,
+        create-date
+          std {
+            year 2016 ,
+            month 6 ,
+            day 2 } } ,
+      seq-set {
+        seq {
+          id {
+            local
+              str "HE584755.1" } ,
+          descr {
+            molinfo {
+              biomol genomic } ,
+            comment "Annotated using prokka 1.11 from
+ http://www.vicbioinformatics.com" } ,
+          inst {
+            repr raw ,
+            mol dna ,
+            length 2202 ,
+            seq-data
+              iupacna "ATGGAGGACTTTGTGCGACAATGCTTCAATCCAATGATCGTCGAGCTTGCGGAAA
+AGGCAATGAAAGAATATGGGGAAGATCCGAAAATCGAAACTAACAAGTTTGCTGCAATATGCACACATTTGGAAGTTT
+GTTTCATGTATTCGGATTTCCATTTCATCGACGAACGGGGTGAATCAATAATTGTAGAATCTGGTGACCCGAATGCAC
+TATTGAAGCACCGATTTGAGATAATTGAAGGAAGAGACCGAATCATGGCCTGGACAGTGGTGAACAGTATATGTAACA
+CAACAGGGGTAGAGAAGCCTAAATTTCTTCCTGATTTGTATGATTACAAAGAGAACCGGTTCATTGAAATTGGAGTAA
+CACGGAGGGAAGTCCACATATATTACCTAGAGAAAGCCAACAAAATAAAATCTGAGAAGACACACATTCACATCTTTT
+CATTCACTGGAGAGGAGATGGCCACCAAAGCGGACTACACCCTTGACGAAGAGAGCAGGGCAAGAATCAAAACTAGGC
+TTTTCACTATAAGACAAGAAATGGCCAGTAGGAGTCTATGGGATTCCTTTCGTCAGTCCGAAAGAGGCGAAGAGACAA
+TTGAAGAAAAATTTGAGATCACAGGAACTATGCGCAAGCTTGCTGACCAAAGTCTCCCACCGAACTTCTCCAGCCTTG
+AAAACTTTAGAGCCTATGTAGATGGATTCGAGCCGAACGGCTGCATTGAGGGCAAGCTTTCCCAAATGTCAAAAGAAG
+TGAACGCCAAAATTGCACCATTCTTGAGGACGACTCCACGCCCCCTCAAATTGCCTGATGGGCCTCTTTGCCATCAGC
+GGTCAAAGTTCCTGCTGATGGATGCTCTGAAATTAAGTATTGAAGACCCGAGTCACGAGGGGGAGGGAATACCCCTAT
+ATGATGCAATCAAATGCATGAAGACATTCTTTGGCTGGAAAGAGCCTAACATAGTCAAACCACATGAGAAAGGCATAA
+ATCCCAATTACCTCATGGCTTGGAAGCAGGTGCTAGCAGAGCTACAGGACATTGAAAATGAAGAGAAGATCCCAAGGA
+CAAAGAACATGAAGAGAACAAGCCAATTGAAGTGGGCACTCGGTGAAAATATGGCACCAGAAAAAGTAGACTTTGATG
+ACTGCAAAGATGTTGGAGACCTTAAACAGTATGACAGTGATGAGCCAGAGCCCAAATCTCTAGCTAGCTGGGTCCAAA
+ATGAATTCAATAAGGCATGTGAATTGACTGATTCAAGCTGGATAGAACTTGATGAAATAGGAGAAGATGTTGCCCCGA
+TTGAACATATCGCAAGCATGAGGAGGAACTATTTCACAGCAGAAGTGTCCCACTGCAGGGCTACTGAATACATAATGA
+AGGGAGTGTACATAAATACGGCCTTGCTCAATGCATCCTGTGCAGCCATGGATGACTTTCAGCTGATCCCAATGATAA
+GCAAATGTAGGACCAAAGAAGGAAGACGGAAAACAAACCTGTATGGGTTCATTATAAAAGGAAGGTCTCATTTGAGAA
+ATGATACTGATGTGGTGAACTTTGTAAGTATGGAGTTCTCACTCACTGACCCGAGACTGGAGCCACACAAATGGGAAA
+AATACTGTGTTCTTGAAATAGGAGACATGCTCTTGAGGACTGCGATAGGCCAAGTGTCGAGGCCCATGTTCCTATATG
+TGAGAACCAATGGAACCTCCAAGATCAAGATGAAATGGGGCATGGAAATGAGGCGCTGCCTTCTTCAGTCTCTTCAGC
+AGATTGAGAGCATGATTGAGGCCGAATCTTCTGTCAAAGAGAAAGACATGACTAAGGAATTCTTTGAAAACAAATCGG
+AAACATGGCCAATCGGAGAGTCACCCAGGGGAGTGGAGGAAGGCTCTATTGGGAAAGTGTGCAGGACTTTACTGGCAA
+AATCTGTATTCAACAGTATATATGCGTCTCCACAACTTGAGGGGTTTTCGGCTGAATCGAGAAAATTGCTTCTCATTG
+TTCAGGCACTTAGGGACAACCTGGAACCTGGAACCTTCGATCTTGGGGGACTATATGAAGCAATCGAGGAGTGCCTGA
+TTAATGATCCCTGGGTTTTGCTTAATGCATCTTGGTTCAACTCCTTCCTCACACATGCACTGAAGTAGTTATGGCAAT
+GCTACTATTTGCTATCCATACTGTCCAAAAAGGTACCTTGT" } } ,
+        seq {
+          id {
+            local
+              str "HE584755.1_1" } ,
+          descr {
+            title "Polymerase acidic protein [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 712 ,
+            seq-data
+              ncbieaa "-RQCFNPMIVELAEKAMKEYGEDPKIETNKFAAICTHLEVCFMYSDFHFIDERGE
+SIIVESGDPNALLKHRFEIIEGRDRIMAWTVVNSICNTTGVEKPKFLPDLYDYKENRFIEIGVTRREVHIYYLEKANK
+IKSEKTHIHIFSFTGEEMATKADYTLDEESRARIKTRLFTIRQEMASRSLWDSFRQSERGEETIEEKFEITGTMRKLA
+DQSLPPNFSSLENFRAYVDGFEPNGCIEGKLSQMSKEVNAKIAPFLRTTPRPLKLPDGPLCHQRSKFLLMDALKLSIE
+DPSHEGEGIPLYDAIKCMKTFFGWKEPNIVKPHEKGINPNYLMAWKQVLAELQDIENEEKIPRTKNMKRTSQLKWALG
+ENMAPEKVDFDDCKDVGDLKQYDSDEPEPKSLASWVQNEFNKACELTDSSWIELDEIGEDVAPIEHIASMRRNYFTAE
+VSHCRATEYIMKGVYINTALLNASCAAMDDFQLIPMISKCRTKEGRRKTNLYGFIIKGRSHLRNDTDVVNFVSMEFSL
+TDPRLEPHKWEKYCVLEIGDMLLRTAIGQVSRPMFLYVRTNGTSKIKMKWGMEMRRCLLQSLQQIESMIEAESSVKEK
+DMTKEFFENKSETWPIGESPRGVEEGSIGKVCRTLLAKSVFNSIYASPQLEGFSAESRKLLLIVQALRDNLEPGTFDL
+GGLYEAIEECLINDPWVLLNASWFNSFLTHALK" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 6 ,
+                    data
+                      prot {
+                        name {
+                          "Polymerase acidic protein" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 711 ,
+                        id
+                          local
+                            str "HE584755.1_1" } } } } } } } ,
+      annot {
+        {
+          data
+            ftable {
+              {
+                id
+                  local
+                    id 5 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 1 } } ,
+                product
+                  whole
+                    local
+                      str "HE584755.1_1" ,
+                location
+                  int {
+                    from 12 ,
+                    to 2150 ,
+                    strand plus ,
+                    id
+                      local
+                        str "HE584755.1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:2.6" } ,
+                  {
+                    qual "inference" ,
+                    val "similar to AA sequence:UniProtKB:Q3HM39" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus "PA" ,
+                        locus-tag "La_Habana_test_00003" } } } } } } } } ,
+    set {
+      class nuc-prot ,
+      descr {
+        source {
+          org {
+            taxname "Genus species" ,
+            orgname {
+              mod {
+                {
+                  subtype strain ,
+                  subname "strain" } } ,
+              gcode 1 } } } ,
+        user {
+          type
+            str "NcbiCleanup" ,
+          data {
+            {
+              label
+                str "method" ,
+              data
+                str "SeriousSeqEntryCleanup" } ,
+            {
+              label
+                str "version" ,
+              data
+                int 7 } ,
+            {
+              label
+                str "month" ,
+              data
+                int 6 } ,
+            {
+              label
+                str "day" ,
+              data
+                int 2 } ,
+            {
+              label
+                str "year" ,
+              data
+                int 2016 } } } ,
+        create-date
+          std {
+            year 2016 ,
+            month 6 ,
+            day 2 } } ,
+      seq-set {
+        seq {
+          id {
+            local
+              str "HE584756.1" } ,
+          descr {
+            molinfo {
+              biomol genomic } ,
+            comment "Annotated using prokka 1.11 from
+ http://www.vicbioinformatics.com" } ,
+          inst {
+            repr raw ,
+            mol dna ,
+            length 1752 ,
+            seq-data
+              iupacna "ATGAAGGCAATACTAGTAGTTCTGCTATATACATTTGCAACCGCAAATGCAGACA
+CATTATGTATAGGTTATCATGCGAACAATTCAACAGACACTGTAGACACAATACTAGAAAAGAATGTAACAGTAACAC
+ACTCTGTTAACCTTCTAGAAGACAAGCATAACGGGAAACTATGCAAACTAAGAGGGGTGGCCCCATTGCATTTGGGTA
+AATGTAACATTGCTGGCTGGATCCTGGGAAATCCAGAGTGTGAATCACTCTCCACAGTAAGCTCATGGTCCTACATTG
+TGGAAACATCTAGTTCAGACAATGGAACGTGTTACCCAGGAGATTTCATCGATTATGAGGAGCTCAGAGAGCAATTGA
+GCTCAGTGTCATCATTTGAAAGGTTTGAGATATTCCCCAAGACAAGTTCATGGCCCAATCATGACTCGAACAAAGGTG
+TAACGGCAGCATGTCCTCATGCTGGAGCAAAAAGCTTCTACAAAAATTTAATATGGCTAGTCAAAAAAGGAAATTCAT
+ACCCAAAGCTCAGCAAATCCTACATTAATGATAAAGGGAAAGAAGTCCTCGTGCTATGGGGCATTCACCATCCATCTA
+CTAGTGCTGACCAACAAAGTCTCTATCAGAATGCAGATGCATATGTTTTTGTGGGGTCATCAAGATACAGCAAGAAGT
+TCAAGCCGGAAATAGCAATAAGACCCAAAGTGAGGGGTCTAGAAGGGAGAATGAACTATTACTGGACACTAGTAGAGC
+CGGGAGACAAAATAACATTCGAAGCAACTGGAAATCTAGTGGTACCGAGATATGCATTCGCAATGGAAAAAAATGCTG
+GATCTGGTATTATCATTTCAGAAACACCATTACACGATTGCAATACAACTTGTCAGACACCCAAGGGTGCTATAAATA
+CCAGCCTCCCATTTCAGAATATACATCCGATCACAATTGGAAAATGTCCAAAATATGTAAAAAGCACAAAATTGAGAA
+TGGCCACAGGATTGAGGAATGTCCCGTCTATTCAATCTAGAGGCCTATTTGGGGCCATTGCCGGTTTCATTGAAGGGG
+GGTGGACAGGGATGGTAGATGGATGGTACGGTTATCACCATCAAAATGAGCAGGGGTCAGGATATGCAGCCGACCTGA
+AGAGCACACAGAATGCCATTGACGAGATTACTAACAAAGTAAATTCTGTTATTGAAAAGATGAATACACAGTTCACAG
+CAGTAGGTAAAGAGTTCAACCACCTGGGAAAGAGAATAGAGAATTTAAATAAAAAGGTTGATGATGGTTTCTTGGACA
+TTTGGACTTACAATGCCGAACTGTTGGTTCTATTGGAAAATGAAAGAACTTTGGACTACCACGATTCAAATGTGAAGA
+ACTTATATGAAAAGGTAAGAAGCCAGCTAAAAAACAATGCCAAGGAAATTGGAAACGGCTGCTTTGAATTTTACCACA
+AATGCGATAACACATGCATGGAAAGTGTCAAAAATGGGACTTATGACTACCCAAAATACTCAGAGGAAGCAAAACTAA
+ACAGAGAAGAAATAGATGGGGTAAAGCTGGAATCAACAAGGATTTATCAGATTTTGGCGATCTATTCAACTGTCGCCA
+GTTCATTGGTACTGGTAGTCTCCCTGGGGGCAATCAGTTTCTGGATGTGCTCTAATGGGTCTCTACAGTGTAGAATAT
+GTATTTAACATTAGGATTTCAGAAACATGAGAAAAACACCCTTGTTTCTACTGACACGG" } } ,
+        seq {
+          id {
+            local
+              str "HE584756.1_1" } ,
+          descr {
+            title "Hemagglutinin precursor [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 566 ,
+            seq-data
+              ncbieaa "MKAILVVLLYTFATANADTLCIGYHANNSTDTVDTILEKNVTVTHSVNLLEDKHN
+GKLCKLRGVAPLHLGKCNIAGWILGNPECESLSTVSSWSYIVETSSSDNGTCYPGDFIDYEELREQLSSVSSFERFEI
+FPKTSSWPNHDSNKGVTAACPHAGAKSFYKNLIWLVKKGNSYPKLSKSYINDKGKEVLVLWGIHHPSTSADQQSLYQN
+ADAYVFVGSSRYSKKFKPEIAIRPKVRGLEGRMNYYWTLVEPGDKITFEATGNLVVPRYAFAMEKNAGSGIIISETPL
+HDCNTTCQTPKGAINTSLPFQNIHPITIGKCPKYVKSTKLRMATGLRNVPSIQSRGLFGAIAGFIEGGWTGMVDGWYG
+YHHQNEQGSGYAADLKSTQNAIDEITNKVNSVIEKMNTQFTAVGKEFNHLGKRIENLNKKVDDGFLDIWTYNAELLVL
+LENERTLDYHDSNVKNLYEKVRSQLKNNAKEIGNGCFEFYHKCDNTCMESVKNGTYDYPKYSEEAKLNREEIDGVKLE
+STRIYQILAIYSTVASSLVLVVSLGAISFWMCSNGSLQCRICI" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 8 ,
+                    data
+                      prot {
+                        name {
+                          "Hemagglutinin precursor" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 565 ,
+                        id
+                          local
+                            str "HE584756.1_1" } } } } } } } ,
+      annot {
+        {
+          data
+            ftable {
+              {
+                id
+                  local
+                    id 7 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 1 } } ,
+                product
+                  whole
+                    local
+                      str "HE584756.1_1" ,
+                location
+                  int {
+                    from 0 ,
+                    to 1700 ,
+                    strand plus ,
+                    id
+                      local
+                        str "HE584756.1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:2.6" } ,
+                  {
+                    qual "inference" ,
+                    val "similar to AA sequence:UniProtKB:P26140" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus "HA" ,
+                        locus-tag "La_Habana_test_00004" } } } } } } } } ,
+    set {
+      class nuc-prot ,
+      descr {
+        source {
+          org {
+            taxname "Genus species" ,
+            orgname {
+              mod {
+                {
+                  subtype strain ,
+                  subname "strain" } } ,
+              gcode 1 } } } ,
+        user {
+          type
+            str "NcbiCleanup" ,
+          data {
+            {
+              label
+                str "method" ,
+              data
+                str "SeriousSeqEntryCleanup" } ,
+            {
+              label
+                str "version" ,
+              data
+                int 7 } ,
+            {
+              label
+                str "month" ,
+              data
+                int 6 } ,
+            {
+              label
+                str "day" ,
+              data
+                int 2 } ,
+            {
+              label
+                str "year" ,
+              data
+                int 2016 } } } ,
+        create-date
+          std {
+            year 2016 ,
+            month 6 ,
+            day 2 } } ,
+      seq-set {
+        seq {
+          id {
+            local
+              str "HE584757.1" } ,
+          descr {
+            molinfo {
+              biomol genomic } ,
+            comment "Annotated using prokka 1.11 from
+ http://www.vicbioinformatics.com" } ,
+          inst {
+            repr raw ,
+            mol dna ,
+            length 1497 ,
+            seq-data
+              iupacna "ATGGCGTCTCAAGGCACCAAACGATCATATGAACAAATGGAGACTGGTGGGGAGC
+GCCAGGATACCACAGAAATCAGAGCATCTGTCGGAAGAATGATTGGTGGAATCGGGAGATTCTACATCCAAATGTGCA
+CTGAACTCAAACTCAGTGATTATGATGGACGACTAATCCAGAATAGCATAACAATAGAGAGGATGGTGCTTTCTGCTT
+TTGATGAGAGAAGAAATAAATACCTAGAAGAGCATCCCAGTGCTGGGAAGGACCCTAAGAAAACAGGAGGACCCATAT
+ATAGAAGAGTAGACGGAAAGTGGATGAGAGAACTCATCCTTTATGACAAAGAAGAAATAAGGAGAGTTTGGCGCCAAG
+CAAACAATGGCGAAGATGCAACAGCAGGTCTTACTCATATCATGATTTGGCATTCCAACCTGAATGATGCCACATATC
+AGAGAACAAGAGCGCTTGTTCGCACCGGAATGGATCCCAGAATGTGCTCTCTAATGCAAGGTTCAACACTTCCCAGAA
+GGTCTGGTGCCGCAGGTGCTGCGGTGAAAGGAGTTGGAACAATAGCAATGGAGCTAATCAGAATGATCAAACGTGGAA
+TCAATGACCGAAATTTCTGGAGGGGTGAAGATGGACGAAGGACAAGGGCTGCTTATGAAAGAACGTGCAATATCCTCA
+AAGGAAAATTTCAAACAGCTGCACAGAGGGCAATGATGGATCAAGTAAGAGAAAGTCGAAACCCAGGAAACGCTGAGA
+TTGAAGACCTCATTTTCCTGGCACGGTCAGCACTCATTTTGAGGGGATCAGTTGCACATAAATCCCGCCTGCCTGCTT
+GTGTGTATGGGCTTGCAGTAGCAAGTGGGCATGATTTTGAAAGGGAAGGATACTCACTGGTCGGGATAGACCCATTCA
+AATTACTCCAAAACAGCCAAGTGGTCAGCCTGATGAGACCAAATGAAAACCCAGCTCACAAGAGTCAATTGGTGTGGA
+TGGCATGCCACTCTGCTGCATTTGAAGATTTAAGAGTATCAAGTTTCATCAGAGGAAAGAAAGTGATTCCAAGAGGAA
+AGCTTTCCACAAGAGGGGTCCAGATTGCTTCAAATGAGAATGTGGAAATCATGGACTCCAATACCCTGGAACTGAGAA
+GCAGATACTGGGCCATAAGGACCAGGAGTGGAGGAAATGCCAATCAACAAAAGGCATCCGCAGGCCAGATCAGTGTGC
+AGCCTACATTCTCAGTGCAGCGGAATCTCCCTTTTGAAAGAGCAACCGTTATGGCAGCATTCAGCGGGAACAATGAAG
+GACGGACATCCGACATGCGAACAGAAGTTATAAGGATGATGGAAAGTGCAAAGCCAGAAGATTTGTCCTTCCAGGGGC
+GGGGAGTATTCGAGCTCTCGGACGAAAAGGCAACGAACCCGATCGTGCTTTGCTTTGACATGAGTAATGAAGGGTCTT
+ATTTCTTCGGAGACAATGCAGAGGAGTATGACAGTTGA" } } ,
+        seq {
+          id {
+            local
+              str "HE584757.1_1" } ,
+          descr {
+            title "Nucleoprotein [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 498 ,
+            seq-data
+              ncbieaa "MASQGTKRSYEQMETGGERQDTTEIRASVGRMIGGIGRFYIQMCTELKLSDYDGR
+LIQNSITIERMVLSAFDERRNKYLEEHPSAGKDPKKTGGPIYRRVDGKWMRELILYDKEEIRRVWRQANNGEDATAGL
+THIMIWHSNLNDATYQRTRALVRTGMDPRMCSLMQGSTLPRRSGAAGAAVKGVGTIAMELIRMIKRGINDRNFWRGED
+GRRTRAAYERTCNILKGKFQTAAQRAMMDQVRESRNPGNAEIEDLIFLARSALILRGSVAHKSRLPACVYGLAVASGH
+DFEREGYSLVGIDPFKLLQNSQVVSLMRPNENPAHKSQLVWMACHSAAFEDLRVSSFIRGKKVIPRGKLSTRGVQIAS
+NENVEIMDSNTLELRSRYWAIRTRSGGNANQQKASAGQISVQPTFSVQRNLPFERATVMAAFSGNNEGRTSDMRTEVI
+RMMESAKPEDLSFQGRGVFELSDEKATNPIVLCFDMSNEGSYFFGDNAEEYDS" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 10 ,
+                    data
+                      prot {
+                        name {
+                          "Nucleoprotein" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 497 ,
+                        id
+                          local
+                            str "HE584757.1_1" } } } } } } } ,
+      annot {
+        {
+          data
+            ftable {
+              {
+                id
+                  local
+                    id 9 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 1 } } ,
+                product
+                  whole
+                    local
+                      str "HE584757.1_1" ,
+                location
+                  int {
+                    from 0 ,
+                    to 1496 ,
+                    strand plus ,
+                    id
+                      local
+                        str "HE584757.1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:2.6" } ,
+                  {
+                    qual "inference" ,
+                    val "similar to AA sequence:UniProtKB:Q67356" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus "NP" ,
+                        locus-tag "La_Habana_test_00005" } } } } } } } } ,
+    set {
+      class nuc-prot ,
+      descr {
+        source {
+          org {
+            taxname "Genus species" ,
+            orgname {
+              mod {
+                {
+                  subtype strain ,
+                  subname "strain" } } ,
+              gcode 1 } } } ,
+        user {
+          type
+            str "NcbiCleanup" ,
+          data {
+            {
+              label
+                str "method" ,
+              data
+                str "SeriousSeqEntryCleanup" } ,
+            {
+              label
+                str "version" ,
+              data
+                int 7 } ,
+            {
+              label
+                str "month" ,
+              data
+                int 6 } ,
+            {
+              label
+                str "day" ,
+              data
+                int 2 } ,
+            {
+              label
+                str "year" ,
+              data
+                int 2016 } } } ,
+        create-date
+          std {
+            year 2016 ,
+            month 6 ,
+            day 2 } } ,
+      seq-set {
+        seq {
+          id {
+            local
+              str "HE584758.1" } ,
+          descr {
+            molinfo {
+              biomol genomic } ,
+            comment "Annotated using prokka 1.11 from
+ http://www.vicbioinformatics.com" } ,
+          inst {
+            repr raw ,
+            mol dna ,
+            length 1438 ,
+            seq-data
+              iupacna "ATGAATCCAAACCAAAAGATAATAACCATTGGTTCGGTCTGTATGACAATTGGAA
+TGGCTAACTTAATATTACAAATTGGAAACATAATCTCAATATGGATTAGCCACTCAATTCAACTTGGGAATCATAATC
+AGATTGAAACATGCAATCAAAGCGTCATTACTTATGAAAACAACACTTGGGTAAATCAGACATATGTTAACATCAGCA
+ACACCAACTTTGCTGCTGGACAGTCAGTGGTTTCCGTGAAATTAGCGGGCAATTCCTCTCTCTGCCCTGTTAGTGGAT
+GGGCTATATACAGTAAAGACAACAGTATAAGAATTGGTTCCAAGGGGGATGTGTTTGTCATAAGGGAACCATTCATAT
+CATGCTCCCCCTTGGAATGCAGAACCTTCTTCTTAACTCAAGGGGCCTTGCTAAATGACAAACATTCCAATGGAACCA
+TTAAAGACAGGAGCCCATATCGAACCCTAATGAGCTGTCCTATTGGTGAAGTTCCCTCTCCATACAACTCAAGATTTG
+AGTCAGTCGCTTGGTCAGCAAGTGCTTGTCATGATGGCATCAGTTGGCTAACAATTGGAATTTCTGGCCCAGACAATG
+GGGCAGTGGCTGTGTTGAATTACAACGGCATAATAACAGACACTATCAAGAGTTGGAGAACCATTATATTGAGAACGC
+AAGACTCCGAATGTGCATGTGTAAATGGTTCTTGCTTTACTGTAATGACCGATGGACCAACTAATGGACAGGCCTCAT
+ACCATATCTTCAAAATAGAAAAGGGAAAGATAGTCAAATCAGTCGAAATGAATGCCCCTAATTATCACTATGAGGAAT
+GCTCCTGTTATCCGGATTCTAGTGAAATCACATGTGTGTGCAGGGATAACTGGCATGGCTCGAATCGACCGTGGGTGT
+CTTTCAATCAGAATCTGGAATATCAGATAGGATACATATGCAGTGGGATTTTCGGAGACAATCCACGCCCTAATGATA
+AGACAGGCAGTTGTGGTCCAGTATCGTCTAATGGAGCAAATGGAGTAAAAGGATTTTCATTCAAATACGGCAATGGTG
+TTTGGATAGGGAGAACTAAAAGCATTAGTTCAAGAAACGGTTTTGAGATGATTTGGGATCCGAACGGATGGACTGGGA
+CAGACAATAACTTCTCAATAAAGCAAGATATCGTAGGAATAAATGAGTGGTCAGGATATAGCGGGAGTTTTGTTCAGC
+ATCCAGAACTAACAGGGCTGGATTGTATAAGACCTTGCTTCTGGGTTGAACTAATCAGAGGGCGACCCAAAGAGAACA
+CAATCTGGACTAGCGGGAGCAGCATATCCTTTTGTGGTGTAAGCAGTGACACTGTGGGTTGGTCTTGGCCAGACGGTG
+CTGAGTTGCCATTTACCATTGACAAGTAATTTGTTCAAAAAACTCCTTGTTTCTACT" } } ,
+        seq {
+          id {
+            local
+              str "HE584758.1_1" } ,
+          descr {
+            title "Neuraminidase [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 469 ,
+            seq-data
+              ncbieaa "MNPNQKIITIGSVCMTIGMANLILQIGNIISIWISHSIQLGNHNQIETCNQSVIT
+YENNTWVNQTYVNISNTNFAAGQSVVSVKLAGNSSLCPVSGWAIYSKDNSIRIGSKGDVFVIREPFISCSPLECRTFF
+LTQGALLNDKHSNGTIKDRSPYRTLMSCPIGEVPSPYNSRFESVAWSASACHDGISWLTIGISGPDNGAVAVLNYNGI
+ITDTIKSWRTIILRTQDSECACVNGSCFTVMTDGPTNGQASYHIFKIEKGKIVKSVEMNAPNYHYEECSCYPDSSEIT
+CVCRDNWHGSNRPWVSFNQNLEYQIGYICSGIFGDNPRPNDKTGSCGPVSSNGANGVKGFSFKYGNGVWIGRTKSISS
+RNGFEMIWDPNGWTGTDNNFSIKQDIVGINEWSGYSGSFVQHPELTGLDCIRPCFWVELIRGRPKENTIWTSGSSISF
+CGVSSDTVGWSWPDGAELPFTIDK" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 12 ,
+                    data
+                      prot {
+                        name {
+                          "Neuraminidase" } ,
+                        ec {
+                          "3.2.1.18" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 468 ,
+                        id
+                          local
+                            str "HE584758.1_1" } } } } } } } ,
+      annot {
+        {
+          data
+            ftable {
+              {
+                id
+                  local
+                    id 11 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 1 } } ,
+                product
+                  whole
+                    local
+                      str "HE584758.1_1" ,
+                location
+                  int {
+                    from 0 ,
+                    to 1409 ,
+                    strand plus ,
+                    id
+                      local
+                        str "HE584758.1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:2.6" } ,
+                  {
+                    qual "inference" ,
+                    val "similar to AA sequence:UniProtKB:Q710U6" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus "NA" ,
+                        locus-tag "La_Habana_test_00006" } } } } } } } } ,
+    set {
+      class nuc-prot ,
+      descr {
+        source {
+          org {
+            taxname "Genus species" ,
+            orgname {
+              mod {
+                {
+                  subtype strain ,
+                  subname "strain" } } ,
+              gcode 1 } } } ,
+        user {
+          type
+            str "NcbiCleanup" ,
+          data {
+            {
+              label
+                str "method" ,
+              data
+                str "SeriousSeqEntryCleanup" } ,
+            {
+              label
+                str "version" ,
+              data
+                int 7 } ,
+            {
+              label
+                str "month" ,
+              data
+                int 6 } ,
+            {
+              label
+                str "day" ,
+              data
+                int 2 } ,
+            {
+              label
+                str "year" ,
+              data
+                int 2016 } } } ,
+        create-date
+          std {
+            year 2016 ,
+            month 6 ,
+            day 2 } } ,
+      seq-set {
+        seq {
+          id {
+            local
+              str "HE584759.1" } ,
+          descr {
+            molinfo {
+              biomol genomic } ,
+            comment "Annotated using prokka 1.11 from
+ http://www.vicbioinformatics.com" } ,
+          inst {
+            repr raw ,
+            mol dna ,
+            length 983 ,
+            seq-data
+              iupacna "ATGAGTCTTCTAACCGAGGTCGGAGCGTACGTTCTTTCTAGCATCACGTCAGGCC
+CACTCAAAGGTGAGATCGCGCAGAGACTGGAAAGTGTCTTTGCAGGAAAGCACACAGATCTTGAGGCTCTCATGGAAT
+GGCTAAAGACAAGACCAATCTTGTCACCTCTGACTAAGGGAATTTTAGGATTTGTGTTCACGCTCACCGTGCCCAGTG
+AGCGAGGACTGCAGCGTAGACGCTTTGTCCAAAATGCCCTAAATGGGAATGGGGACCCGAACAACATGGATAGAGCAG
+TTAAACTATACAAGAAGCTCAAAAGAGAAATAACGTTCCATGGGGCCAAGGAGGTGTCACTAAGCTATTCAACTGGTG
+CACTCGCCAGTTGCATGGGCCTCATATACAACAGGATGGGAACAGTGACCACAGAAGCTGCTTTTGGTCTAGTGTGTG
+CCACTTGTGAACAGATTGCTGATTCACAGCATCGGTCTCACAGACAGATGGCTACTACCACCAATCCACTAATCAGGC
+ATGAAAACAGAATGGTGCTGGCTAGCACTACGGCAAAGGCTATGGAACAGATGGCTGGATCGAGTGAACAGGCAGCGG
+AGGCCATGGAGGTTGCTAATCAGACTAGGCAGATGGTACATGCAATGAGAACTATTGGGACTCATCCTAGCTCCAGTG
+CTGGTCTGAAAGATGACCTTCTTGAAAATTTGCAGGCCTACCAGAAGCGAATGGGAGTGCAGATGCAGCGATTCAAGT
+GATCCTCTCGTCATTGCAGCAAATATCATTGGGATCTTGCACCTGATATTGTGGATTACTGATCGTCTTTTTTTCAAA
+TGTATTTATCGTCGCTTTAAATACGGTTTGAAAAGAGGGCCTTCTACGGAAGGAGTGCCTGAGTCCATGAGGGAAGAA
+TATCAACAGGAACAGCAGAGTGCTGTGGATGTTGACGATGGTCATTTTGTCAACATAGAGCTAGAGTAAA" } } ,
+        seq {
+          id {
+            local
+              str "HE584759.1_1" } ,
+          descr {
+            title "Matrix protein 1 [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 252 ,
+            seq-data
+              ncbieaa "MSLLTEVGAYVLSSITSGPLKGEIAQRLESVFAGKHTDLEALMEWLKTRPILSPL
+TKGILGFVFTLTVPSERGLQRRRFVQNALNGNGDPNNMDRAVKLYKKLKREITFHGAKEVSLSYSTGALASCMGLIYN
+RMGTVTTEAAFGLVCATCEQIADSQHRSHRQMATTTNPLIRHENRMVLASTTAKAMEQMAGSSEQAAEAMEVANQTRQ
+MVHAMRTIGTHPSSSAGLKDDLLENLQAYQKRMGVQMQRFK" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 14 ,
+                    data
+                      prot {
+                        name {
+                          "Matrix protein 1" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 251 ,
+                        id
+                          local
+                            str "HE584759.1_1" } } } } } } } ,
+      annot {
+        {
+          data
+            ftable {
+              {
+                id
+                  local
+                    id 13 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 1 } } ,
+                product
+                  whole
+                    local
+                      str "HE584759.1_1" ,
+                location
+                  int {
+                    from 0 ,
+                    to 758 ,
+                    strand plus ,
+                    id
+                      local
+                        str "HE584759.1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:2.6" } ,
+                  {
+                    qual "inference" ,
+                    val "similar to AA sequence:UniProtKB:P05775" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus "M" ,
+                        locus-tag "La_Habana_test_00007" } } } } } } } } ,
+    set {
+      class nuc-prot ,
+      descr {
+        source {
+          org {
+            taxname "Genus species" ,
+            orgname {
+              mod {
+                {
+                  subtype strain ,
+                  subname "strain" } } ,
+              gcode 1 } } } ,
+        user {
+          type
+            str "NcbiCleanup" ,
+          data {
+            {
+              label
+                str "method" ,
+              data
+                str "SeriousSeqEntryCleanup" } ,
+            {
+              label
+                str "version" ,
+              data
+                int 7 } ,
+            {
+              label
+                str "month" ,
+              data
+                int 6 } ,
+            {
+              label
+                str "day" ,
+              data
+                int 2 } ,
+            {
+              label
+                str "year" ,
+              data
+                int 2016 } } } ,
+        create-date
+          std {
+            year 2016 ,
+            month 6 ,
+            day 2 } } ,
+      seq-set {
+        seq {
+          id {
+            local
+              str "HE584760.1" } ,
+          descr {
+            molinfo {
+              biomol genomic } ,
+            comment "Annotated using prokka 1.11 from
+ http://www.vicbioinformatics.com" } ,
+          inst {
+            repr raw ,
+            mol dna ,
+            length 840 ,
+            seq-data
+              iupacna "ATGGACTCCAACACCATGTCAAGCTTTCAGGTAGACTGTTTCCTTTGGCATATCC
+GCAAGCGGTTTGCAGACAATGGATTGGGTGATGCCCCATTCCTTGATCGGCTCCGCCGAGATCAAAAGTCCTTAAAAG
+GAAGAGGCAACACCCTTGGCCTCGATATCGAAACAGCCACTCTTGTTGGGAAACAAATCGTGGAATGGATCCTGAAAG
+AGGAATCCAGCGAGACACTTAGAATGACAATTGCATCTGTACCAACTTCGCGCTACCTTTCTGACATGACCCTCGAGG
+AAATGTCACGAGACTGGTTCATGCTCATGCCTAGGCAAAAGATAATGGGCCCTCTTCGCGTGCGATTGGACCAAGCGG
+TCATGGAAAAGAACATAGTACTGAAAGCGAACTTCAGTGTAATCTTTAATCGATTAGAGACCTTGATACTACTAAGGG
+CTTTCACCGAGGAGGGATCAATATTTGGAGAAATTTCACAATTACCTTCTCTTCCTGGACATACTTATGAGGATGTCA
+AAAATGCAGTTGGGGTCCTCATCGGAGGACTTGAATGGAATGGTAACACGGTTCGAGTCTCTGAAAATATACAGAGAT
+TCGCTTGGAGAAACTGTGATGAGAATGGGAGACCTTCACTACCTCCAGAGCAGAAATGAAACTTGGCGAGAGCAATTG
+GGACAGAAATTTGAGGAAATAAGGTGGTTAATTGAAGAAATGCGGCGCAGATTGAAAGCGACAGAGAATACTTTCAAA
+CAAATAACATTTATGCAAGCCTTACAACTACCGCTTGAAGTACAACAAGAGATAAGAGCATTCTCGTTTCAACTTATG
+TAATG" } } ,
+        seq {
+          id {
+            local
+              str "HE584760.1_1" } ,
+          descr {
+            title "Non-structural protein 1 [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 214 ,
+            seq-data
+              ncbieaa "MSSFQVDCFLWHIRKRFADNGLGDAPFLDRLRRDQKSLKGRGNTLGLDIETATLV
+GKQIVEWILKEESSETLRMTIASVPTSRYLSDMTLEEMSRDWFMLMPRQKIMGPLRVRLDQAVMEKNIVLKANFSVIF
+NRLETLILLRAFTEEGSIFGEISQLPSLPGHTYEDVKNAVGVLIGGLEWNGNTVRVSENIQRFAWRNCDENGRPSLPP
+EQK" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 17 ,
+                    data
+                      prot {
+                        name {
+                          "Non-structural protein 1" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 213 ,
+                        id
+                          local
+                            str "HE584760.1_1" } } } } } } ,
+        seq {
+          id {
+            local
+              str "HE584760.1_2" } ,
+          descr {
+            title "Nuclear export protein [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 72 ,
+            seq-data
+              ncbieaa "MRMGDLHYLQSRNETWREQLGQKFEEIRWLIEEMRRRLKATENTFKQITFMQALQ
+LPLEVQQEIRAFSFQLM" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 18 ,
+                    data
+                      prot {
+                        name {
+                          "Nuclear export protein" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 71 ,
+                        id
+                          local
+                            str "HE584760.1_2" } } } } } } } ,
+      annot {
+        {
+          data
+            ftable {
+              {
+                id
+                  local
+                    id 15 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 1 } } ,
+                product
+                  whole
+                    local
+                      str "HE584760.1_1" ,
+                location
+                  int {
+                    from 15 ,
+                    to 659 ,
+                    strand plus ,
+                    id
+                      local
+                        str "HE584760.1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:2.6" } ,
+                  {
+                    qual "inference" ,
+                    val "similar to AA sequence:UniProtKB:Q99AU3" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus "NS_1" ,
+                        locus-tag "La_Habana_test_00008" } } } } ,
+              {
+                id
+                  local
+                    id 16 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 1 } } ,
+                product
+                  whole
+                    local
+                      str "HE584760.1_2" ,
+                location
+                  int {
+                    from 619 ,
+                    to 837 ,
+                    strand plus ,
+                    id
+                      local
+                        str "HE584760.1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:2.6" } ,
+                  {
+                    qual "inference" ,
+                    val "similar to AA sequence:UniProtKB:Q89733" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus "NS_2" ,
+                        locus-tag "La_Habana_test_00009" } } } } } } } } } }

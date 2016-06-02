@@ -1,0 +1,4 @@
+    18 ERROR:   SEQ_FEAT.GeneXrefWithoutGene
+     1 ERROR:   SEQ_FEAT.OnlyGeneXrefs
+     1 ERROR:   SEQ_FEAT.StartCodon
+     1 ERROR:   SEQ_INST.BadProteinStart
