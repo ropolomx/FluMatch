@@ -26,7 +26,7 @@ In order to run this script, you would need to have the following installed on y
 The script does the following:
 
 1. Reads in your FASTA format file with contig sequences
-2. 
+2. Annotates your contigs using Prokka
   
 ## BLAST database set up 
 
