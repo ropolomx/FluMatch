@@ -3,7 +3,7 @@ Automating Prokka annotations, BLAST runs and generation of BLAST reports
 
 ## Dependencies
 
-The script will work for Linux. Windows usage has not been implemented yet, but a solution for Windows is being developed. The installation of a Linux machine (preferrably Ubuntu) is strongly recommended for the meanwhile.
+The script will work for Linux. Windows usage has not been implemented yet. The installation of a Linux virtual machine (preferrably Ubuntu) on your Windows computer is strongly recommended for the meanwhile.
 
 In order to run this script, you would need to have the following installed on your system:
 
