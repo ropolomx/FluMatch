@@ -11,7 +11,6 @@ The script does the following:
 4. Generates a report table with the following fields:
 
 Query | Matching Strain | Query Start | Query End | Subject Start | Subject End | Identities | Length of the Alignment | Query Coverage % | Percent ID | E-value 
-
 ----- | --------------- | ----------- | --------- | ------------- | ----------- | ---------- | ----------------------- | ---------------- | ---------- | ------- 
 
 
