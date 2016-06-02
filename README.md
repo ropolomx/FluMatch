@@ -49,7 +49,7 @@ The script does the following:
 
 ### Arguments and options:
 
-__The most important thing to keep in mind is that the name of the FASTA file that contains the contigs you want to analyze should be written at the very end of the command__
+The most important thing to keep in mind is that the name of the FASTA file that contains the contigs you want to analyze should be written at the very end of the command.
 
 `--blast-db`: __This argument is required__ The local BLAST database that you want to search your annotated sequences against. See the __Set up__ section above.
 
