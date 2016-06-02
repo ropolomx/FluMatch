@@ -1,4 +1,4 @@
-# diagflu
+# FluMatch
 Automating Prokka annotations, BLAST runs and generation of BLAST reports
 
 ## Dependencies
@@ -33,7 +33,7 @@ In order to run this script, you would need to have the following installed on y
 
 ## Usage
 
-`python diagflu.py --blast-db /path/to/blastdb -r name_of_report_file.txt -p name_of_prokka_folder contigs.fasta`
+`python flumatch.py --blast-db /path/to/blastdb -r name_of_report_file.txt -p name_of_prokka_folder contigs.fasta`
 
 ## Sample data
 

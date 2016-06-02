@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 ###################################################################
-##### Diagflu: a script to automate annotation and search of ######
+##### FluMatch: a script to automate annotation and search of #####
 ############## the closest strain match of contigs ################
 ###################################################################
 
