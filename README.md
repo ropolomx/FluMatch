@@ -63,8 +63,8 @@ __The most important thing to keep in mind is that the name of the FASTA file th
 
 I have included a folder with sample data to try the script. The folder contains the following files and directories 
 
-* `La_Habana_test.fasta` which contains the 8 segments of the publicly available strain A/swine/La/Habana/130/2010/H1N1 (.
+* `La_Habana_test.fasta` which contains the 8 segments of the publicly available strain A/swine/La/Habana/130/2010/H1N1 (Genbank Accession numbers HE584753.1 to HE584760.1).
 
-* `TopBLASThits.txt`: an example report of the BLAST report of the annotated strain. The version of `blastn` used for this was `2.2.28+`
+* `TopBLASThits.txt`: an example report of the BLAST report of the annotated strain. The version of `blastn` used for this was `2.2.28+`. The current version of online BLAST is `2.3.1+`.
 
 * A directory called __La\_Habana\_test__ that has the output of the __Prokka annotation process__
