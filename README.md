@@ -3,7 +3,7 @@ Automating Prokka annotations, BLAST runs and generation of BLAST reports
 
 ## Dependencies
 
-The script will work for Linux. Windows usage has not been implemented yet. The installation of a Linux virtual machine (preferrably Ubuntu) on your Windows computer is strongly recommended for the meanwhile.
+The script will work and has been tested on Linux only. Windows implementation is being investigated, but it is not available yet. The installation of a Linux virtual machine (preferrably Ubuntu) on your Windows computer is strongly recommended for the meanwhile.
 
 In order to run this script, you would need to have the following installed on your system:
 
@@ -11,7 +11,7 @@ In order to run this script, you would need to have the following installed on y
 
 2. __NCBI BLAST+__
   
-  This is the standalone version of BLAST that you can run locally on your machine. `diagflu.py` calls the `blastn` algorithm.
+  This is the standalone version of BLAST that you can run locally on your machine. `flumatch.py` calls the `blastn` algorithm.
 
   Instructions for Linux:
 
@@ -20,8 +20,15 @@ In order to run this script, you would need to have the following installed on y
 3. __Prokka: microbial annotation software__
   
   Please follow the installation instructions in the official [Prokka repository](https://github.com/tseemann/prokka)
+
+## Process
+
+The script does the following:
+
+1. Reads in your FASTA format file with contig sequences
+2. 
   
-## Set up 
+## BLAST database set up 
 
 `diagflu.py` will do a BLAST search of your annotated sequences vs. a local database. You need to build said database. The instructions to do this are:
 
@@ -29,17 +36,34 @@ In order to run this script, you would need to have the following installed on y
 2. Once you have the database you want, you need to type in the following commands:
 
   `makeblastdb -in filename.fasta -dbtype nucl -title filename -out filename`
-3. You are good to go.
+
+   For example, if you have a FASTA file named `avian.fasta` or `avian.fna` which contains the sequences that you want to use as your BLAST database, you could do the following:
+
+  `makeblastdb -in avian.fasta -dbtype nucl -title avian -out avian`
+
+  After you run that command you will see that three new files will be created in the directory with the extensions `*.nhr`, `*.nin`, and `*.nsq`. These are the files that BLAST will use to search your sequences against.
 
 ## Usage
 
 `python flumatch.py --blast-db /path/to/blastdb -r name_of_report_file.txt -p name_of_prokka_folder contigs.fasta`
 
+### Arguments and options:
+
+__The most important thing to keep in mind is that the name of the FASTA file that contains the contigs you want to analyze should be written at the very end of the command__
+
+`--blast-db`: __This argument is required__ The local BLAST database that you want to search your annotated sequences against. See the __Set up__ section above.
+
+`-p` or `--prokka-dir`: The name of the directory where the Prokka output will be stored. __Default =__ the program will create a sub-directory with the name of the file you are 
+
+`-t` or `--top-hits` : The number of top BLAST hits for each annotated CDS that you want to see in the final report. __Default = 10__
+
+`-r` or `--report-out`: The name of the report text file. This is a tab-separated file that you can open in R or Excel. __Default = `TopBLASThits.txt`__
+
 ## Sample data
 
-The folder contains the following files and directories 
+I have included a folder with sample data to try the script. The folder contains the following files and directories 
 
-* `La_Habana_test.fasta` which contains the 8 segments of the A/swine/La/Habana/130/2010/H1N1 strain.
+* `La_Habana_test.fasta` which contains the 8 segments of the publicly available strain A/swine/La/Habana/130/2010/H1N1 (.
 
 * `TopBLASThits.txt`: an example report of the BLAST report of the annotated strain. The version of `blastn` used for this was `2.2.28+`
 
