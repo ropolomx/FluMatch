@@ -13,6 +13,8 @@ The script does the following:
 Query | Matching Strain | Query Start | Query End | Subject Start | Subject End | Identities | Length of the Alignment | Query Coverage % | Percent ID | E-value 
 
 ----- | --------------- | ----------- | --------- | ------------- | ----------- | ---------- | ----------------------- | ---------------- | ---------- | ------- 
+
+
 ## Dependencies
 
 The script will work and has been tested on Linux only. Windows implementation is being investigated, but it is not available yet. The installation of a Linux virtual machine (preferrably Ubuntu) on your Windows computer is strongly recommended for the meanwhile.
