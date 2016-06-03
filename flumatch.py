@@ -37,7 +37,7 @@ def arguments():
     return parser.parse_args()
 
 def strain_name(fasta):
-        return os.path.splitext(os.path.basename(fasta))[0]
+    return os.path.splitext(os.path.basename(fasta))[0]
 
 def prokka_annotate(prokka_dir, fasta, cores):
 
@@ -51,7 +51,7 @@ def prokka_annotate(prokka_dir, fasta, cores):
               '--cpus', str(cores),
               fasta)
 
-    subprocess.call(prokka) 
+    subprocess.call(prokka) # consider check_call to terminate if error
     
     return os.path.join(prokka_dir, strain, strain + '.ffn')
 
@@ -79,6 +79,18 @@ def tabulate_hsp_xml(result, num_top_results):
                 strain = re.sub(r'\s+','_', re.sub(r'gnl\|(\w*|\W*)\|\d*\s','',
                                 aln.title.strip()))
 
+                identities = hsp.identities
+
+                aln_length = hsp.align_length
+
+                query_length = res.query_length
+
+                sbjct_length = len(hsp.sbjct)
+
+                identity_perc = 100. * identities / aln_length
+
+                query_cov =  abs(100. * aln_length / query_length)
+
                 query_start = hsp.query_start
 
                 query_end = hsp.query_end
@@ -87,27 +99,16 @@ def tabulate_hsp_xml(result, num_top_results):
 
                 sbjct_end = hsp.sbjct_end
 
-                identities = hsp.identities
-
-                length = hsp.align_length
-
-                slen = hsp.sbjct_end - (hsp.sbjct_start - 1)
-                qlen = hsp.query_end - (hsp.query_start - 1)
-
-
-                query_cov =  abs(100. * slen / qlen)
-
-                identity_perc = 100. * identities / length
-
                 e_value = hsp.expect
 
-                yield (query, strain, query_start, query_end, sbjct_start, sbjct_end,
-                       identities, length, query_cov, identity_perc, e_value)
+                # slen = hsp.sbjct_end - (hsp.sbjct_start - 1)
+                # qlen = hsp.query_end - (hsp.query_start - 1)
+
+                yield (query, strain, query_cov, identity_perc, identities, aln_length, query_start, query_end, sbjct_start, sbjct_end, query_length, sbjct_length, e_value)
 
 def blast_report(reportpath, result, num_top_results):
 
-    headers = ['Query','Matching Strains','Query Start', 'Query End', 'Subject Start','Subject End', 'Identities', 'Length',
-               'QueryCoverage','PercentID','e-value']
+    headers = ['Query','Matching Strain','Query Coverage', 'Percent ID', 'Identities', 'Alignment Length', 'Query Start', 'Query End', 'Subject Start', 'Subject End', 'Query Length', 'Subject Length', 'e-value']
     
     with open(reportpath,'w') as f:
         
