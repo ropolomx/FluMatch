@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 ###################################################################
 ##### FluMatch: a script to automate annotation and search of #####
@@ -8,7 +8,7 @@
 from Bio import SeqIO
 from Bio.Blast import NCBIXML
 from multiprocessing import cpu_count
-from StringIO import StringIO
+from io import StringIO
 import subprocess
 import re
 import os
@@ -100,9 +100,6 @@ def tabulate_hsp_xml(result, num_top_results):
                 sbjct_end = hsp.sbjct_end
 
                 e_value = hsp.expect
-
-                # slen = hsp.sbjct_end - (hsp.sbjct_start - 1)
-                # qlen = hsp.query_end - (hsp.query_start - 1)
 
                 yield (query, strain, query_cov, identity_perc, identities, aln_length, query_start, query_end, sbjct_start, sbjct_end, query_length, sbjct_length, e_value)
 
