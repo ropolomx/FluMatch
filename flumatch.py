@@ -32,7 +32,7 @@ def arguments():
     parser.add_argument('--cores', type=int, default=cpu_count(),
                         help='Number of CPU cores to use [all]')
 
-    parser.add_argument('contigs', help = 'FASTA formatted file with contig sequences')
+    parser.add_argument('contigs', help = 'FASTA formatted file containing contig sequences')
  
     return parser.parse_args()
 
@@ -51,7 +51,7 @@ def prokka_annotate(prokka_dir, fasta, cores):
               '--cpus', str(cores),
               fasta)
 
-    subprocess.call(prokka) # consider check_call to terminate if error
+    subprocess.call(prokka)
     
     return os.path.join(prokka_dir, strain, strain + '.ffn')
 
@@ -67,7 +67,6 @@ def blast(query, blastdb, cores):
 
     return NCBIXML.parse(StringIO(blastn_out))
 
-
 def tabulate_hsp_xml(result, num_top_results):
 
     for res in result:
@@ -76,8 +75,7 @@ def tabulate_hsp_xml(result, num_top_results):
 
                 query = res.query
 
-                strain = re.sub(r'\s+','_', re.sub(r'gnl\|(\w*|\W*)\|\d*\s','',
-                                aln.title.strip()))
+                strain = aln.hit_def
 
                 identities = hsp.identities
 
