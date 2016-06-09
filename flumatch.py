@@ -10,7 +10,6 @@ from Bio.Blast import NCBIXML
 from multiprocessing import cpu_count
 from io import StringIO
 import subprocess
-import re
 import os
 import argparse
 import csv
