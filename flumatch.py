@@ -62,9 +62,9 @@ def blast(query, blastdb, cores):
               '-outfmt', '5',
               '-num_threads', str(cores))
 
-    blastn_out = subprocess.check_output(blastn)
+    blastn_out = subprocess.check_output(blastn, universal_newlines=True)
 
-    return NCBIXML.parse(StringIO(blastn_out))
+    return NCBIXML.parse(StringIO(blastn_out, ))
 
 def tabulate_hsp_xml(result, num_top_results):
 
