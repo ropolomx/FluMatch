@@ -98,23 +98,39 @@ def tabulate_hsp_xml(result, num_top_results):
 
                 e_value = hsp.expect
 
-                yield (query, strain, query_cov, identity_perc, identities, aln_length, query_start, query_end, sbjct_start, sbjct_end, query_length, sbjct_length, e_value)
+                yield (
+                    query,
+                    strain,
+                    query_cov,
+                    identity_perc,
+                    identities,
+                    aln_length,
+                    query_start,
+                    query_end,
+                    sbjct_start,
+                    sbjct_end,
+                    query_length,
+                    sbjct_length,
+                    e_value
+                    )
 
 def blast_report(reportpath, result, num_top_results):
 
-    headers = ['Query',
-            'Matching Strain',
-            'Query Coverage',
-            'Percent ID',
-            'Identities',
-            'Alignment Length',
-            'Query Start',
-            'Query End',
-            'Subject Start',
-            'Subject End',
-            'Query Length',
-            'Subject Length',
-            'e-value']
+    headers = [
+        'Query',
+        'Matching Strain',
+        'Query Coverage',
+        'Percent ID',
+        'Identities',
+        'Alignment Length',
+        'Query Start',
+        'Query End',
+        'Subject Start',
+        'Subject End',
+        'Query Length',
+        'Subject Length',
+        'e-value'
+        ]
     
     with open(reportpath,'w') as f:
         
