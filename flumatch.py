@@ -102,7 +102,19 @@ def tabulate_hsp_xml(result, num_top_results):
 
 def blast_report(reportpath, result, num_top_results):
 
-    headers = ['Query','Matching Strain','Query Coverage', 'Percent ID', 'Identities', 'Alignment Length', 'Query Start', 'Query End', 'Subject Start', 'Subject End', 'Query Length', 'Subject Length', 'e-value']
+    headers = ['Query',
+            'Matching Strain',
+            'Query Coverage',
+            'Percent ID',
+            'Identities',
+            'Alignment Length',
+            'Query Start',
+            'Query End',
+            'Subject Start',
+            'Subject End',
+            'Query Length',
+            'Subject Length',
+            'e-value']
     
     with open(reportpath,'w') as f:
         
