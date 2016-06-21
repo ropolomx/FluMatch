@@ -64,7 +64,7 @@ def blast(query, blastdb, cores):
 
     blastn_out = subprocess.check_output(blastn, universal_newlines=True)
 
-    return NCBIXML.parse(StringIO(blastn_out, ))
+    return NCBIXML.parse(StringIO(blastn_out))
 
 def tabulate_hsp_xml(result, num_top_results):
 
@@ -106,7 +106,7 @@ def tabulate_hsp_xml(result, num_top_results):
                     identities,
                     aln_length,
                     query_start,
-                    query_end,
+                    query_end,k
                     sbjct_start,
                     sbjct_end,
                     query_length,
