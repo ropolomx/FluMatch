@@ -70,33 +70,32 @@ def tabulate_hsp_xml(result, num_top_results):
 
     for res in result:
         for aln in res.alignments[0:num_top_results]:
-            for hsp in aln.hsps:
 
                 query = res.query
 
                 strain = aln.hit_def
 
-                identities = hsp.identities
+                identities = aln.hsps[0].identities
 
-                aln_length = hsp.align_length
+                align_length = aln.hsps[0].align_length
 
                 query_length = res.query_length
 
-                sbjct_length = len(hsp.sbjct)
+                strain_length = len(aln.length)
 
                 identity_perc = 100. * identities / aln_length
 
-                query_cov =  abs(100. * aln_length / query_length)
+                query_cov =  abs(100. * align_length / query_length)
 
-                query_start = hsp.query_start
+                query_start = aln.hsps[0].query_start
 
-                query_end = hsp.query_end
+                query_end = aln.hsps[0].query_end
 
-                sbjct_start = hsp.sbjct_start
+                sbjct_start = aln.hsps[0].sbjct_start
 
-                sbjct_end = hsp.sbjct_end
+                sbjct_end = aln.hsps[0].sbjct_end
 
-                e_value = hsp.expect
+                e_value = aln.hsps[0].expect
 
                 yield (
                     query,
@@ -105,12 +104,13 @@ def tabulate_hsp_xml(result, num_top_results):
                     identity_perc,
                     identities,
                     aln_length,
+                    hit_length,
                     query_start,
-                    query_end,k
+                    query_end,
                     sbjct_start,
                     sbjct_end,
                     query_length,
-                    sbjct_length,
+                    strain_length,
                     e_value
                     )
 
@@ -128,7 +128,7 @@ def blast_report(reportpath, result, num_top_results):
         'Subject Start',
         'Subject End',
         'Query Length',
-        'Subject Length',
+        'Strain Length',
         'e-value'
         ]
     
