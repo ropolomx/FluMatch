@@ -70,49 +70,50 @@ def tabulate_hsp_xml(result, num_top_results):
 
     for res in result:
         for aln in res.alignments[0:num_top_results]:
+            
+            hsp = aln.hsps[0]
 
-                query = res.query
+            query = res.query
 
-                strain = aln.hit_def
+            strain = aln.hit_def
+            
+            identities = hsp.identities
+            
+            align_length = hsp.align_length
+            
+            query_length = res.query_length
+            
+            strain_length = aln.length
+            
+            identity_perc = 100. * identities / align_length
+            
+            query_cov =  abs(100. * align_length / query_length)
+            
+            query_start = hsp.query_start
+            
+            query_end = hsp.query_end
+            
+            sbjct_start = hsp.sbjct_start
+            
+            sbjct_end = hsp.sbjct_end
+            
+            e_value = hsp.expect
 
-                identities = aln.hsps[0].identities
-
-                align_length = aln.hsps[0].align_length
-
-                query_length = res.query_length
-
-                strain_length = len(aln.length)
-
-                identity_perc = 100. * identities / aln_length
-
-                query_cov =  abs(100. * align_length / query_length)
-
-                query_start = aln.hsps[0].query_start
-
-                query_end = aln.hsps[0].query_end
-
-                sbjct_start = aln.hsps[0].sbjct_start
-
-                sbjct_end = aln.hsps[0].sbjct_end
-
-                e_value = aln.hsps[0].expect
-
-                yield (
-                    query,
-                    strain,
-                    query_cov,
-                    identity_perc,
-                    identities,
-                    aln_length,
-                    hit_length,
-                    query_start,
-                    query_end,
-                    sbjct_start,
-                    sbjct_end,
-                    query_length,
-                    strain_length,
-                    e_value
-                    )
+            yield (
+                query,
+                strain,
+                query_cov,
+                identity_perc,
+                identities,
+                align_length,
+                query_start,
+                query_end,
+                sbjct_start,
+                sbjct_end,
+                query_length,
+                strain_length,
+                e_value
+                )
 
 def blast_report(reportpath, result, num_top_results):
 
