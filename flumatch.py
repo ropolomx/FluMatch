@@ -2,7 +2,8 @@
 
 ###################################################################
 ##### FluMatch: a script to automate annotation and search of #####
-############## the closest strain match of contigs ################
+############## the closest strain match of AIV contigs ############
+############## Written by: Rodrigo Ortega Polo ###################
 ###################################################################
 
 from Bio import SeqIO
